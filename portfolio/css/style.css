@@ -95,7 +95,7 @@ a{
     background: none;
     /* border: 1px solid white; 
     border: none*/
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 1rem;
 
     cursor: pointer;
@@ -142,12 +142,27 @@ a{
     justify-content: center;
     /* align-items: center; */
 }
-.projets-link img{ 
-    width: 24%;
+.projets-section img{ 
+    width: 25%;
 
     object-fit: cover; 
-    border: 4px solid black;
+    /* border: 4px solid black; */
     margin-left: 0.2rem;
+    margin-top: 0.2rem;
+
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border:  0.1rem solid black;
+    /* box-shadow: 0.3em 0.3em var(--first-color), -0.3em -0.3em var(--first-color); */
+    
+}
+
+.projets-section img:hover{ 
+    box-shadow: 0.3em 0.3em var(--first-color), -0.3em -0.3em var(--first-color);
+     /* inset 0.3em 0.3em var(--first-color); */
+    /* box-shadow: 0em 0em var(--first-color), inset 0em 0em var(--first-color); */
+    /* border: 4px solid rgb(9, 5, 247); */
+    
 }
 
 
@@ -188,6 +203,24 @@ a{
     border: 2px solid white;
     box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.05);
 }
+
+/* .projets-link img{
+    width: 250px;
+    height: 250px;
+    border: 1px solid white;
+
+    margin-left: 0.3rem;
+
+    border-radius: 1rem;
+
+    box-shadow: 0px 0px 12px -5px rgba(0,0,0,0.18);
+}
+
+.projets-link:hover{
+    background:var(--violet);
+    border: 2px solid white;
+    box-shadow: 0px 0px 23px -5px rgba(0, 0, 0, 0.05);
+} */
 
 
 

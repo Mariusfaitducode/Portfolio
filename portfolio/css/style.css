@@ -220,11 +220,36 @@ a{
 
 
 .projets{
-    /* display: flex; */
+    display: flex;
     border: 1px solid rgb(1, 1, 24);
     margin-top: 2rem; 
 
     /* justify-content: space-between; */
+}
+
+[class^="projet-"] {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    transition: all 0.3s ease-in-out;
+
+    border: 1px solid black;
+
+    box-shadow: 0.3em 0.3em var(--first-color);
+}
+
+.projet-1:hover{
+    box-shadow: 0em 0em var(--first-color), inset 0em 0em var(--first-color);
+}
+
+.projet-1 img{
+    width: 402px;
+    height: 328px;
+}
+
+.projet-2 img{
+    width: 454px;
+    height: 298px;
 }
 
 .projets-title{
@@ -278,7 +303,7 @@ a{
 
     margin-left: 0.3rem;
 
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
 
     box-shadow: 0px 0px 12px -5px rgba(0,0,0,0.18);
 }
@@ -290,7 +315,7 @@ a{
 
     margin-left: 0.3rem;
 
-    border-radius: 1rem;
+    /* border-radius: 1rem; */
 
     box-shadow: 0px 0px 12px -5px rgba(0,0,0,0.18);
 }

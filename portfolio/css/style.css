@@ -38,6 +38,8 @@ a{
     height: 450px;
     padding: 1rem 100px 0px 100px;
     background-color: rgba(177, 201, 238, 0.545);
+
+    box-shadow: 0px 1rem 1rem rgba(177, 201, 238, 0.545);
 }
 
 .header-title{
@@ -145,6 +147,8 @@ a{
 .section-1{
     padding: 1rem 100px 1rem 100px;
     background-color: rgba(238, 234, 177, 0.204); 
+
+    /* box-shadow: 0px 1rem 1rem rgba(238, 234, 177, 0.204); */
 }
 
 .experiences{
@@ -216,7 +220,12 @@ a{
 .stack-card img {
     max-width: 80px;
     display: inline-block;
-  }
+}
+
+.section-3{
+    padding: 1rem 100px 1rem 100px;
+    background-color: rgba(0, 0, 0, 0.836);
+}
 
 
 .projets{
@@ -224,10 +233,19 @@ a{
     border: 1px solid rgb(1, 1, 24);
     margin-top: 2rem; 
 
-    /* justify-content: space-between; */
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: baseline;
+
+    /* justify-content: space-around; */
 }
 
-[class^="projet-"] {
+
+.click{
+
+    /* position: relative; */
     margin-right: 1rem;
     margin-bottom: 1rem;
 
@@ -238,8 +256,13 @@ a{
     box-shadow: 0.3em 0.3em var(--first-color);
 }
 
-.projet-1:hover{
+.click:hover{
     box-shadow: 0em 0em var(--first-color), inset 0em 0em var(--first-color);
+}
+
+.projet-1{
+    width: 404px;
+    height: 330px;
 }
 
 .projet-1 img{
@@ -247,9 +270,25 @@ a{
     height: 328px;
 }
 
+.projet-2{
+    width: 456px;
+    height: 300px;
+}
+
 .projet-2 img{
     width: 454px;
     height: 298px;
+}
+
+.projet-3{
+    width: 491px;
+    height: 332px;
+}
+
+.projet-3 img{
+    width: 489px;
+    height: 330px;
+
 }
 
 .projets-title{

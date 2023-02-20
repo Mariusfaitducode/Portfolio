@@ -583,6 +583,10 @@ section{
     height: 100%;
 }
 
+.card:hover .card__overlay{
+    display: block;
+}
+
 .contact{
     background: rgba(185, 3, 3, 0.2);
 }
@@ -701,4 +705,14 @@ footer p{
     to{
         transform: translateX(0);
     }
+}
+
+/* Components */
+
+.modal{
+    display: none;
+}
+
+.modal.show{
+    display: block;
 }

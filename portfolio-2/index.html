@@ -11,10 +11,10 @@
 <!-- Pensez à changer taille images -->
 
 <body>
-    <header class="header show-nav">
+    <header class="header">
         <div class="container D-Flex">
             <div class="logo">
-                Marius <br>Diguat--Mateus
+                Marius Diguat--Mateus
             </div>
 
             <nav class="navbar">
@@ -217,21 +217,21 @@
             </div>
             <ul class="grid portfolio-filters list-unstyled">
                 <li class="grid__item">
-                    <a href="#" class="active">Tous les projets</a>
+                    <a href="#" class="active" data-filter="all">Tous les projets</a>
                 </li>
                 <li class="grid__item">
-                    <a href="#">Projets python</a>
+                    <a href="#" data-filter="python">Projets python</a>
                 </li>
                 <li class="grid__item">
-                    <a href="#">Projets unity</a>
+                    <a href="#" data-filter="unity">Projets unity</a>
                 </li>
                 <li class="grid__item">
-                    <a href="#">Projets C/Java</a>
+                    <a href="#" data-filter="c-java">Projets C/Java</a>
                 </li>
             </ul>
             <div class="grid">
                 <div class="grid__item">
-                    <div class="card">
+                    <div class="card" data-category="python">
                         <img src="img/projets/Labyrinthe3.jpg" alt="Labyrinthe" class="card__image">
                         <div class="card__inner">
                             <h3 class="card__title">Génération et résolution de Labyrinthe</h3>
@@ -243,7 +243,7 @@
                     </div>
                 </div>
                 <div class="grid__item">
-                    <div class="card">
+                    <div class="card" data-category="python">
                         <img src="img/projets/Puissance4_1.jpg" alt="Puissance 4" class="card__image">
                         <div class="card__inner">
                             <h3 class="card__title">Puissance 4 avec minimax alpha beta</h3>
@@ -255,7 +255,7 @@
                     </div>
                 </div>
                 <div class="grid__item">
-                    <div class="card">
+                    <div class="card" data-category="python">
                         <img src="img/projets/IQ_puzzler_2.jpg" alt="IQ puzzler" class="card__image">
                         <div class="card__inner">
                             <h3 class="card__title">IQ puzzler</h3>
@@ -267,7 +267,7 @@
                     </div>
                 </div>
                 <div class="grid__item">
-                    <div class="card">
+                    <div class="card" data-category="python">
                         <img src="img/projets/Sudoku3.jpg" alt="Sudoku" class="card__image">
                         <div class="card__inner">
                             <h3 class="card__title">Résolution de Sudoku</h3>

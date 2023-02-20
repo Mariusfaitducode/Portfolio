@@ -239,6 +239,7 @@ section{
         display: block;
         font-size: 2rem;
         padding: 2rem;
+        transition: all .4s;
     }
 
     .show-nav nav{
@@ -246,6 +247,29 @@ section{
         width: 100%;
         left: 0;
         z-index: 2;
+    }
+
+    .show-nav nav li a:hover{
+        transform: scale(1.1);
+        /* text-decoration: none; */
+        color: #000;
+    }
+
+    .show-nav .burger .bar{
+        width: 0;
+    }
+
+    .burger .bar::before,
+    .burger .bar::after{
+        transition: all .2s ease-in-out;
+    }
+
+    .show-nav .burger .bar::before{
+        transform: rotate(-45deg);
+    }
+
+    .show-nav .burger .bar::after{
+        transform: rotate(45deg);
     }
     
 }
@@ -465,6 +489,10 @@ section{
     max-width: 50%;
     /* margin-bottom: 0; */
     /* margin: 1rem; */
+}
+
+.portfolio .grid__item.hide {
+    display: none;
 }
 
 .portfolio-filters a{

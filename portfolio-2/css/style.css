@@ -780,6 +780,7 @@ footer p{
     margin-bottom: 0;
     opacity: 1;
     transition: all 1s ease;
+    padding: 2rem;
 }
 
 @media screen and (min-width: 750px){

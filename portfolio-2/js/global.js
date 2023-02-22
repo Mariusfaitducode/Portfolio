@@ -99,3 +99,56 @@ function showProjectsDetails(){
 }
 
 showProjectsDetails();
+
+//effets
+
+
+const observerIntersectionAnimation = () => {
+    const sections = document.querySelectorAll('section');
+    const skills = document.querySelectorAll('.competences .bar');
+
+    sections.forEach((section, index) => {
+        if (index === 0){
+            return;
+        }
+        //console.log(index);
+        section.style.opacity = "0";
+        section.style.transition = "all 1.6s";
+    });
+
+    let sectionObserver = new IntersectionObserver(function(entries,observer){
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                let elem = entry.target;
+                elem.style.opacity = "1";
+               // console.log(elem);
+            }
+        });
+    });
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    skills.forEach((skill, index) => {
+       
+        //console.log(index);
+        skill.style.width = "0";
+        skill.style.transition = "all 1.6s";
+    });
+
+    let skillsObserver = new IntersectionObserver(function(entries,observer){
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                let elem = entry.target;
+                elem.style.width = elem.dataset.width + '%';
+            }
+        });
+    });
+
+    skills.forEach(skill => {
+        skillsObserver.observe(skill);
+    });
+}
+
+observerIntersectionAnimation();

@@ -152,3 +152,31 @@ const observerIntersectionAnimation = () => {
 }
 
 observerIntersectionAnimation();
+
+// Sélectionnez votre section hero et votre texte
+const sectionHero = document.querySelector('.hero');
+const sectionHeroText = document.querySelector('.hero__item');
+
+// Fonction pour détecter si la section est visible à l'écran
+function isElementVisible(el) {
+  const rect = el.getBoundingClientRect();
+  const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+  const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+  const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
+  const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+
+  return (vertInView && horInView);
+}
+
+// Fonction pour changer l'opacité du texte en fonction de la visibilité de la section
+function toggleSectionHeroTextOpacity() {
+  if (isElementVisible(sectionHero)) {
+    sectionHeroText.style.opacity = 1;
+  } else {
+    sectionHeroText.style.opacity = 0;
+  }
+}
+
+// Écoutez l'événement scroll de la page et appelez la fonction pour changer l'opacité du texte
+window.addEventListener('scroll', toggleSectionHeroTextOpacity);

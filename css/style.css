@@ -323,7 +323,7 @@ section{
 .hero .title{
     color: inherit;
     font-size: 4rem;
-    margin: 1rem 0;
+    margin: 2rem 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -340,12 +340,14 @@ section{
 .hero .btn{
     text-align: center;
     border: none;
-    background: #333;
+    background: #3f3f3f;
     color: white;
     width: auto;
-    min-width: 160px;
+    /* min-width: 160px; */
     font-size: 2rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
+    padding: 0.5rem 1.5rem;
+    box-shadow: 2px 2px 2px#000;
 }
 
 .hero .btn:hover{
@@ -410,12 +412,14 @@ section{
     }
 
     .hero__item{
+        
         color: #000;
         position: fixed;
         top: 120px;
         right: 50%;
         max-width: 45%;
         text-align: left;
+        align-items: flex-start;
         /* overflow: scroll; */
         /* overflow: hidden; */
         z-index: 0;
@@ -428,12 +432,18 @@ section{
 
     .hero .title{
         font-size: 5rem;
+        
     }
 
     .hero__avatar img{
         scale: 0;
         opacity: 0;
         overflow: hidden;
+    }
+
+    .hero .btn{
+        margin-top: 1rem;
+        margin-left: 4rem;
     }
 }
 /* @media screen and (min-width:1500px) {

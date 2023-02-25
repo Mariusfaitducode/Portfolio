@@ -153,30 +153,33 @@ const observerIntersectionAnimation = () => {
 
 observerIntersectionAnimation();
 
-// Sélectionnez votre section hero et votre texte
-const sectionHero = document.querySelector('.hero');
-const sectionHeroText = document.querySelector('.hero__item');
 
-// Fonction pour détecter si la section est visible à l'écran
-function isElementVisible(el) {
-  const rect = el.getBoundingClientRect();
-  const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-  const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+//Hero : permet de cacher le texte lorsque l'on scroll et que la section "a propos" recouvre "hero"
+//Rectifie la cliquabilité des liens
 
-  const vertInView = (rect.top <= windowHeight) && ((rect.top + rect.height) >= 0);
-  const horInView = (rect.left <= windowWidth) && ((rect.left + rect.width) >= 0);
+const hero = document.querySelector('.hero');
+const heroText = document.querySelector('.hero__item');
+const heroLinks = document.querySelectorAll('.hero__item a');
 
-  return (vertInView && horInView);
-}
+window.addEventListener('scroll', function() {
+  const distanceFromTop = hero.getBoundingClientRect().bottom;
+  const windowHeight = window.innerHeight;
+  const distanceFromBottom = windowHeight - distanceFromTop;
 
-// Fonction pour changer l'opacité du texte en fonction de la visibilité de la section
-function toggleSectionHeroTextOpacity() {
-  if (isElementVisible(sectionHero)) {
-    sectionHeroText.style.opacity = 1;
+  if (distanceFromBottom >= 0) {
+    heroText.style.opacity = 1 - (distanceFromBottom / windowHeight) * 2;
   } else {
-    sectionHeroText.style.opacity = 0;
+    heroText.style.opacity = 1;
   }
-}
-
-// Écoutez l'événement scroll de la page et appelez la fonction pour changer l'opacité du texte
-window.addEventListener('scroll', toggleSectionHeroTextOpacity);
+  if (heroText.style.opacity < 0){
+    heroLinks.forEach(link => {
+        console.log(link);
+        link.style.pointerEvents = "none";
+    });
+  } else {
+    heroLinks.forEach(link => {
+        console.log(link);
+        link.style.pointerEvents = "auto";
+    });
+  }
+});

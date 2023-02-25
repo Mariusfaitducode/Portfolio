@@ -7,6 +7,12 @@
 :root{
     /* Changer couleurs */
     --color-body: #333333;
+
+    --color-sect_1:#87cefa;
+    --color-sect_2:hsl(287, 40%, 80%);
+    --color-sect_3:#56aaff;
+    --color-sect_4:#ADD8E6;
+    --color-sect_5: #7ca4c4;
 }
 
 *{
@@ -27,6 +33,7 @@ body{
     line-height: 1.6;
     color:  #555;
     margin: 0;
+    /* pointer-events: none; */
     /* text-align: center; */
 }
 
@@ -311,7 +318,7 @@ section{
     background: #5b6c78;
     color: #FFF;
     padding: 1rem 0 0 0;
-  }
+}
 
 .hero .title{
     color: inherit;
@@ -380,6 +387,10 @@ section{
 
 @media screen and (min-width:750px) {
 
+    .hero__overlay{
+        pointer-events: none;
+    }
+
     .hero{
         /* background: rgb(101, 101, 197); */
         
@@ -394,7 +405,8 @@ section{
         background-size: cover;
         background-attachment: fixed;
         position: relative;
-        z-index: -1;
+        /* z-index: -1; */
+        pointer-events: none;
     }
 
     .hero__item{
@@ -406,19 +418,20 @@ section{
         text-align: left;
         /* overflow: scroll; */
         /* overflow: hidden; */
-        /* z-index: 1; */
-        
-    }
-
-    .hero__item a{
+        z-index: 0;
         pointer-events: none;
     }
+
+    .hero__item a {
+        pointer-events: auto; /* Ajout de pointer-events: auto */
+      }
 
     .hero .title{
         font-size: 5rem;
     }
 
     .hero__avatar img{
+        scale: 0;
         opacity: 0;
         overflow: hidden;
     }
@@ -436,8 +449,10 @@ section{
 
 .apropos{
     /* padding-top: 0; */
-    background-color:rgb(184,228,228) ;
+    /* background-color:rgb(184,228,228) ; */
+    background-color:var(--color-sect_1);
     justify-content: center;
+    /* z-index: 1; */
 }
 
 .apropos .presentation{
@@ -487,7 +502,7 @@ section{
 
 
 .competences{
-    background-color: rgb(236,243,172);
+    background-color: var(--color-sect_2);
 }
 
 
@@ -526,7 +541,8 @@ section{
 /* PORTFOLIO */
 
 .portfolio{
-    background-color:rgb(252,212,159);
+    /* background-color:rgb(252,212,159); */
+    background-color:var(--color-sect_3);
 }
 
 
@@ -657,7 +673,8 @@ section{
 /* EXPERIENCE */
 
 .experiences{
-    background-color: rgb(232, 175, 171);
+    /* background-color: rgb(232, 175, 171); */
+    background-color: var(--color-sect_4);
 }
 
 /* .grid__item img{
@@ -692,7 +709,8 @@ section{
 /* CONTACT */
 
 .contact{
-    background:rgb(205,138,222);
+    /* background:rgb(205,138,222); */
+    background-color: var(--color-sect_5);
 }
 
 .form{

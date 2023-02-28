@@ -274,24 +274,27 @@
                                             
                                         <h5 class="h3">Principe</h5>
                                         <p>
-                                            Escape World est sans aucun doute mon plus grand et ambitieux projet personnel.
+                                            Escape World est sans aucun doute mon projet personnel le plus ambitieux. 
                                             J'ai commencé ce projet en m'inspirant des vidéos de Sebastian Lague et en suivant son tutoriel sur la génération procédurale.
+
                                             <br>
-                                            De nombreuses idées différentes m'ont traversé l'esprit pour ce jeu.
-                                            Je voulais tout d'abord faire un jeu de stratégie s'inspirant du jeu de société seven wonders et du jeu mobile polytopia.
-                                            J'ai ensuite pensé faire un jeu multijoueur tel qu'un cache-cache ou un prop hunt.
-                                            Toutes ces idées sont en suspension et j'aimerais bien essayer de les réaliser plus tard.
+                                            De nombreuses idées m'ont traversé l'esprit. Je voulais tout d'abord réaliser un jeu de stratégie s'inspirant du jeu de société Seven Wonders et du jeu mobile Polytopia. 
+                                            J'ai ensuite imaginé un jeu multi-joueurs (cache-cache ou prop hunt). 
+                                            Tous ces programmes sont en cours d'élaboration et je me donne le temps de les concrétiser à mes heures « perdues ».
                                             <br><br>
-                                            Actuellement, mon objectif est de réaliser un jeu d'aventure à travers différents mondes 3D. 
-                                            L'idée serait que dans chaque monde il y ait une énigme à résoudre, une épreuve à accomplir ou un objet à trouver permettant ainsi de se déplacer jusqu'au monde suivant.
-                                            <br><br>
+                                            Mon dernier objectif est de réaliser un jeu d'aventure explorant différents mondes en 3D. 
+                                            A chaque monde correspond un défi permettant d'évoluer au sein du jeu : 
+                                            une énigme à résoudre, une épreuve à accomplir ou un objet à trouver.
+                                            <br>
                                             Comme on peut le voir sur les images, j'ai déjà programmé quelques mondes différents avec des petites tâches à réaliser.
-                                            Cela m'a demandé beaucoup de temps et m'a permis d'acquérir une très bonne maîtrise du logiciel Unity et du language C#.
-                                            Toutefois, le projet est toujours au stade de prototype et l'histoire globale du jeu est encore à travailler.
                                             <br><br>
-                                            Actuellement en stand-by, j'attends que l'inspiration revienne pour me remettre à travailler dessus.
-                                            Je suis toutefois ouvert à tout type de collaboration. 
-                                            Un jeu vidéo ne repose pas que sur le code, les graphismes, l'histoire, la musique... Sont des parties essentielles du jeu sur lesquels je ne suis pas expert.
+                                            Cet exercice m'a permis d'acquérir une très bonne maîtrise du logiciel Unity et du language C#. 
+                                            Le projet reste au stade de prototype et l'histoire globale du jeu est encore à travailler.
+
+                                            <br><br>
+                                            Je suis ouvert à tout type de collaboration pour faire évoluer ce projet. 
+                                            Un jeu vidéo ne repose pas que sur le code. 
+                                            Les graphismes, l'histoire, la musique entre autres sont des parties essentielles du jeu sur lesquelles je ne suis pas expert.
                                             <br><br>
                                             Si ce jeu vous intéresse, n'hésitez pas à me contacter. 
                                         </p>
@@ -363,11 +366,29 @@
 
                                         <h5 class="h3">Principe</h5>
                                         <p>
-                                            Le principe de ce projet est de générer aléatoirement un labyrinthe qu'on peut ensuite résoudre.
-                                            Je me suis inspiré d'une vidéo de Dimension Code : (lien vidéo) ainsi que de Wikipédia (lien page).
+                                            Ce projet génère de manière aléatoire un labyrinthe à parcourir et franchir. 
+                                            Je me suis inspiré d'une vidéo de Dimension Code et renseigné plus en précision sur 
+                                            <a href="https://fr.wikipedia.org/wiki/Mod%C3%A9lisation_math%C3%A9matique_d%27un_labyrinthe" target="_blank">Wikipédia</a>. 
                                             Il y a 2 algorithmes différents qui permettent de générer le labyrinthe, c'est pourquoi il y a 2 boutons générations.
-                                            Le premier utilise la fusion aléatoire de chemins, tandis que le deuxième utilise l'exploration exhaustive.
-                                            Pour la résolution, il s'agit de l'algorithme A étoile qui permet de déterminer le chemin le plus court entre 2 points.
+                                            Ces 2 méthodes partent d'un labyrinthe où tout les murs sont fermés puis construisent les chemins en cassant les murs,
+                                            résultant ainsi à un vrai labyrinthe.  
+                                            <br><br>
+                                            Le premier utilise <strong>la fusion aléatoire de chemins</strong> : 
+                                            Le programme choisit un mur au hasard, 
+                                            qu'il casse si les couleurs des 2 cases à côté sont différentes, 
+                                            une fois le mur cassé, la couleurs des cases et de l'ancien mur sont uniformisés.
+                                            A la fin du programme il ne reste ainsi plus qu'une seule couleur et le labyrinthe est formé.
+                                            <br><br>
+                                            
+                                            Le deuxième utilise <strong>l'exploration exhaustive</strong> :
+                                            L'algorithme part d'une case puis casse un des murs autour de la case de manière aléatoire.
+                                            Il se déplace ensuite à la nouvelle case dévoilé et la marque comme visitée.
+                                            Lorsque une case n'a plus de murs a cassé menant a une case non visitée, l'algorithme retourne à la case précédente.
+
+                                            <br><br>
+                                            Pour la résolution, il s'agit de <strong>l'algorithme A étoile</strong> qui permet de déterminer le chemin le plus court entre 2 points :
+                                            Cet algorithme donne une évaluation à chaque case pour définir laquelle il doit visiter en priorité.
+                                            Dans notre cas, cette évaluation est réalisé en fonction de la distance qu'il reste à parcourir et du nombre de cases parcouru jusqu'à la case évalué.
                                         </p>
 
                                         <h5 class="h3">Technologies</h5>
@@ -375,6 +396,7 @@
                                             <li>Python</li>
                                             <li>Tkinter</li>
                                             <li>Algorithmes A*</li>
+                                            <li>Algorithmes récursifs</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -439,17 +461,20 @@
 
                                         <h5 class="h3">Principe</h5>
                                         <p>
-                                           Le puissance 4 est un jeu qui me tient à coeur, car c'est à travers lui que j'ai réellement découvert la programmation.
-                                           Les règles sont simples : la première personne réussissant à aligner 4 jetons horizontalement, verticalement ou en diagonale à gagné.
-                                           <br><br>
-                                           Il s'agissait ainsi de notre premier réel projet informatique donné par l'UTBM, nous devions réaliser un Puissance N : 
-                                           l'utilisateur pouvait donc choisir la taille de la grille et ainsi le nombre de jetons à aligner. 
-                                           Ceci étant codé en C, cela nous obligeait à utiliser les principes de bases de la programmation ainsi que d'utiliser l'allocation dynamique et la sauvegarde de données.
+                                            Le Puissance 4 est un jeu qui me tient à cœur. 
+                                            C'est en le codant que j'ai fait mes premiers pas dans l'univers de la programmation. 
+                                            Les règles sont simples : la première personne réussissant à aligner 4 jetons horizontalement, verticalement ou en diagonale a gagné.
+
                                             <br><br>
-                                            Une fois ce projet terminé, j'ai voulu explorer plus loin le sujet en rajoutant une interface graphique avec SDL2. 
+                                            Il s'agit de notre premier projet informatique imposé par l'UTBM. 
+                                            Nous devions réaliser un Puissance N : 
+                                            l'utilisateur pouvait choisir la taille de la grille et ainsi le nombre de jetons à aligner. 
+                                            Le codage est en C, nous obligeant à utiliser les principes de bases de la programmation ainsi qu'à utiliser <strong>l'allocation dynamique</strong> et la <strong>sauvegarde de données</strong>.
                                             <br><br>
-                                            Puis, plusieurs mois après je me suis intéressé à l'intelligence artificielle et j'ai voulu faire un programme permettant de jouer de manière réfléchie.
-                                            Conseillé par certains professeurs et me renseignant à travers différentes vidéos je me suis lancé dans un algorithme minimax.
+                                            Une fois ce projet terminé, j'ai voulu encore explorer le sujet en rajoutant une interface graphique avec <strong>SDL2</strong>. 
+                                            <br><br>
+                                            Plus tard je me suis intéressé à l'intelligence artificielle et j'ai voulu faire un programme permettant de jouer de manière réfléchie. 
+                                            Conseillé par certains professeurs et m'appuyant sur différents tutos vidéos je me suis lancé dans un algorithme <strong>minimax</strong>.
                                             <br><br>
                                             Minimax est un algorithme récursif pour les jeux à 2 joueurs permettant de trouver quel coup serait le plus avantageux pour l'ordinateur.
                                             Il amène l'ordinateur à passer en revue toutes les possibilités pour un nombre limité de coups et à leur assigner une valeur en fonction des avantages que lui ou l'adversaire obtiendrait.
@@ -457,8 +482,8 @@
                                             
                                             <br><br>
                                             Le semestre d'automne 2022, j'ai eu des cours axés sur l'intelligence artificielle reprenant l'algorithme minimax.
-                                            Pour un projet de cette matière, je l'ai reproduit sur le jeu Teeko qui est assez similaire au puissance 4.
-                                            J'ai aussi rajouté l'élagage alpha-beta qui permet d'améliorer l'efficacité de l'algorithme en termes de calculs. 
+                                            Pour un projet de cette matière, je l'ai reproduit sur le jeu <a href="https://github.com/SkateZen/Teeko">Teeko</a> qui est assez similaire au Puissance 4.
+                                            J'ai aussi rajouté <strong>l'élagage alpha-beta</strong> qui permet d'améliorer l'efficacité de l'algorithme en termes de calculs. 
 
                                         </p>
 
@@ -529,11 +554,12 @@
 
                                         <h5 class="h3">Principe</h5>
                                         <p>
-                                           IQ Puzzler Pro est un projet réalisé pour le cours d'intelligence artificielle du semestre d'automne 2022.
-                                           Le problème proposé était de réaliser un algorithme capable de complété une grille avec des pièces proposés, de sorte à ce que la grille soit complètement pleine.
+                                           IQ Puzzler Pro est un projet réalisé en cours d'intelligence artificielle à l'automne 2022.
+                                           Le défi : réaliser un algorithme capable de compléter une grille avec des pièces proposées, de sorte à ce que la grille soit complètement pleine. 
                                            Nous avons voulu rajouter au projet la possibilité de générer aléatoirement la grille et les pièces pour la compléter.
+
                                            <br><br>
-                                           Le programme permettant de résoudre la grille est basé sur le même principe que pour la résolution de sudoku.
+                                           Le programme permettant de résoudre la grille est basé sur le même principe que celui permettant la résolution de sudokus.
                                            L'algorithme prend une pièce disponible et la place dans le premier endroit où celle-ci rentre en fonction des pièces déjà placé.
                                            Lorsqu'une pièce ne peut rentrer à aucun endroit, l'algorithme retourne à la pièce précédente et teste une nouvelle configuration. 
                                         </p>
@@ -607,12 +633,13 @@
 
                                         <h5 class="h3">Principe</h5>
                                         <p>
-                                           Le principe de ce projet est de réaliser un programme permettant de résoudre une grille de sudoku.
-                                           L'algorithme permettant de faire cela est basé sur le même fonctionnement que pour le IQ Puzzler.
-                                           Le programme va placer un chiffre dans chaque case l'une après l'autre en prenant en compte les règles du sudoku. 
-                                           Lorsqu'il arrive sur une case où plus aucun chiffre n'est possible, il retourne à la case précédente et essaye une combinaison différente.
-                                           <br><br>
-                                           Une amélioration intéréssante serait de rajouter la possibilité à l'utilisateur de rentrer sa propre grille ou de générer une grille non complété de manière aléatoire et avec la possibilité de choisir le niveau.
+
+                                            Ce programme permet de résoudre une grille de sudoku.
+                                            L'algorithme est basé sur le même fonctionnement que pour le IQ Puzzler.
+                                            Le programme va placer un chiffre dans chaque case l'une après l'autre en prenant en compte les règles du sudoku. 
+                                            Lorsqu'il arrive sur une case où aucun chiffre n'est possible sans enfreindre les règles, il retourne à la case précédente et essaye une combinaison différente.
+                                            <br><br>
+                                            On pourrait perfectionner ce programme en offrant la possibilité à l'utilisateur de rentrer sa propre grille ou de générer une grille non complétée de manière aléatoire avec la possibilité de choisir le niveau.
                                         </p>
 
                                         <h5 class="h3">Technologies</h5>
@@ -686,7 +713,7 @@
                                         <p>
                                            J'ai dans ce projet reproduit le jeu du snake. 
                                            L'objectif du jeu est de faire manger au serpent le plus de pomme possible sans taper les bords du plateau et sans se rentrer dedans.
-                                           À chaque pomme le serpent grandit d'une case.
+                                           À chaque pomme avalée le serpent grandit d'une case.
                                            <br><br>
                                            Ce jeu est un bon environnement pour commencer le deep learning.
                                            L'idée serait de réaliser un réseau de neurones capable de comprendre les mécanismes du jeu et de s'améliorer au fur et à mesure de ses parties.
@@ -759,7 +786,7 @@
 
                                         <h5 class="h3">Principe</h5>
                                         <p>
-                                           J'ai réalisé ce projet au semestre de printemps 2022 pour un cours sur la programmation objet à travers le langage Java.
+                                           J'ai réalisé ce projet au printemps 2022 lors d'un cours sur la programmation objet à travers le langage Java.
                                            L'intérêt de ce projet était de réaliser toutes les classes différentes utiles au jeu. 
                                            Ainsi, le code est composé de multiples classes qui définissent les objets, les règles et les paramètres nécéssaires au bon fonctionnement du jeu.
                                            L'interface a été implémentée avec la bibliothèque graphique Swing. 
@@ -837,10 +864,10 @@
 
                                         <h5 class="h3">Principe</h5>
                                         <p>
-                                           Ballz Game est mon premier jeu fini réalisé avec Unity.
+                                           Ballz Game est le premier jeu codé de bout en bout avec Unity.
                                            Il s'inspire du jeu mobile Ballz. 
                                            Le concept est de cliquer dans la direction que la balle rouge prendra.
-                                           L'objectif est de casser les carrés en les tapant le nombre de fois indiqué sur leur corps.
+                                           L'objectif est de briser les carrés en les tapant le nombre de fois indiqué sur leur corps.
                                            Lorque un carré vert est cassé le nombre de balles blanches augmente.
                                            Les carrés descendent d'un cran une fois que la balle rouge retouche le sol.
                                            Si un carré arrive tout en bas, la partie est terminée. 
@@ -920,11 +947,11 @@
 
                                         <h5 class="h3">Principe</h5>
                                         <p>
-                                           Ce projet a été réalisé au semestre de printemps 2022 dans un cours introduisant le logiciel Unity.
-                                           L'énoncé du projet était de réaliser une plateforme de 3 minis jeux : Furapi Bird, Brick Breaker et Apple Catcher.
-                                           Nous avons rajouté comme bonus le jeu Stack ce qui nous a permis de montrer que nous maîtrisions aussi Unity 3D.
-                                           <br><br>
-                                           Bien que les jeux soient très simples, nous avons pu apprendre à travers ce projet à réaliser des jeux soignés grâce à l'ajout de décors,
+                                            Ce projet a été réalisé au semestre de printemps 2022 dans un cours introduisant le logiciel Unity.
+                                            L'énoncé du projet était de réaliser une plateforme de 3 mini jeux : Furapi Bird, Brick Breaker et Apple Catcher.
+                                            Nous avons rajouté comme bonus le jeu Stack ce qui nous a permis de montrer que nous maîtrisions aussi <strong>Unity 3D</strong>.
+                                            <br><br>
+                                            Bien que les jeux soient très simples, nous avons pu apprendre à travers ce projet à réaliser des jeux soignés grâce à l'ajout de décors,
                                             de musiques de fond et de petites animations sur l'oiseau et le bonhomme tenant le panier.
 
                                         </p>
@@ -1006,18 +1033,18 @@
 
                                         <h5 class="h3">Principe</h5>
                                         <p>
-                                           Fin novembre 2022 j'ai participé à une Scientific Game Jam organisé par l'Université de Franche-Comté à Belfort.
-                                           Le principe de cet évènement était de passer un week-end sur la création d'un jeu inspiré par un sujet de thèse.
-                                           Nous avons choisis la thèse de Cindy Gervolino, qui a étudié les croisements entre littératures et mathématiques avec entre autres,
-                                           l'étude de Flatland d'Edwin A.Abbott. 
-                                           Un mathématicien qui nous amène à découvrir les mondes à plusieurs dimensions en compagnie d'un carré, 
-                                           A. Square, qui suit un voyage initiatique à la rencontre des habitants de Pointland, Lineland, Flatland et Spaceland. 
+                                            Fin novembre 2022 j'ai participé à une Scientific Game Jam organisé par l'Université de Franche-Comté à Belfort.
+                                            Le principe de cet évènement était de passer, en équipe, un week-end sur la création d'un jeu inspiré par un sujet de thèse.
+                                            Nous avons choisis la thèse de Cindy Gervolino, qui a étudié les croisements entre littératures et mathématiques avec entre autres,
+                                            l'étude de Flatland d'Edwin A.Abbott. 
+                                            Un mathématicien qui nous amène à découvrir les mondes à plusieurs dimensions en compagnie d'un carré, 
+                                            A. Square, qui suit un voyage initiatique à la rencontre des habitants de Pointland, Lineland, Flatland et Spaceland. 
 
-                                           <br><br>
-                                           Ce jeu vous permet de vous mettre dans la peau de A. Square en l'incarnant à travers les différentes dimensions. 
-                                           Vous commencerez alors dans Lineland, un monde à une dimension, puis vous serez amené progressivement à passer de monde en monde au travers de différentes épreuves. 
-                                           L'essentiel de votre travail sera alors de sortir d'un grand labyrinthe dans lequel est prisonnier A. Square. 
-                                           Mais saurez-vous trouver de combien de dimension est fait ce labyrinthe ?
+                                            <br><br>
+                                            Ce jeu vous permet de vous mettre dans la peau de A. Square en l'incarnant à travers les différentes dimensions. 
+                                            Vous commencerez alors dans Lineland, un monde à une dimension, puis vous serez amené progressivement à passer de monde en monde au travers de différentes épreuves. 
+                                            L'essentiel de votre travail sera alors de sortir d'un grand labyrinthe dans lequel est prisonnier A. Square. 
+                                            Mais saurez-vous trouver de combien de dimension est fait ce labyrinthe ?
 
                                         </p>
 
@@ -1091,10 +1118,10 @@
 
                                         <h5 class="h3">Principe</h5>
                                         <p>
-                                            J'ai découvert le Jeu de la Vie grâce à une vidéo de Science Etonnante (<a href="https://youtu.be/S-W0NX97DB0" target="_blank">lien vidéo</a>).
+                                            J'ai découvert le Jeu de la Vie grâce à une vidéo de <a href="https://youtu.be/S-W0NX97DB0" target="_blank">Science Etonnante</a>.
                                             <br>
                                             Le Jeu de la vie est un « jeu à zéro joueur », il ne nécessite aucune intervention du joueur lors de son déroulement.
-                                            Il s'agit d'un automate cellulaire, un modèle où chaque état conduit mécaniquement à l'état suivant à partir de règles préétablies.
+                                            Il s'agit d'un <strong>automate cellulaire</strong>, un modèle où chaque état conduit mécaniquement à l'état suivant à partir de règles préétablies.
                                             <br><br>
                                             Les règles sont les suivantes :
                                             <br>
@@ -1102,7 +1129,7 @@
                                             Une cellule vivante (noir) possédant deux ou trois cellules voisines vivantes le reste, sinon elle meurt.
                                             <br>
                                             Chaque cellule possède 8 cellules voisine qui sont ses cellules adjacentes.
-                                            <br>
+                                            <br><br>
                                             Ce qui m'a donné envie de coder ce jeu est le fait que les règles sont simples mais peuvent amené à des résultats très imprévisibles.
                                             <br><br>
                                             Le challenge de ce projet était de modéliser ces règles en C et d'afficher le résultat avec SDL2.

@@ -546,6 +546,16 @@ section{
     padding: .9rem 2rem;
 } */
 
+.competences .certifications a{
+    display: flex;
+}
+
+.competences .certifications p{
+    padding-left: 1rem;
+    padding-top: 1rem;
+}
+
+
 .competences img{
     border-radius: 10%;
 }

@@ -200,6 +200,7 @@ function heroTextAdapter(){
 
 window.addEventListener('scroll', heroTextAdapter);
 window.addEventListener('resize', heroTextAdapter);
+// window.addEventListener('refresh', heroTextAdapter);
 
 
 function getCurrentSection() {
@@ -246,7 +247,7 @@ function hideCurrentNavLink(){
 
 }
 
-window.addEventListener('scroll', hideCurrentNavLink);
-links.addEventListener('click', hideCurrentNavLink);
+// window.addEventListener('scroll', hideCurrentNavLink);
+// links.addEventListener('click', hideCurrentNavLink);
 
 

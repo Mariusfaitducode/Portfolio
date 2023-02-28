@@ -9,7 +9,7 @@ function menuMobile(){
     const links = document.querySelectorAll('.navbar a');
 
     btn.addEventListener('click', () =>{
-        console.log('click');
+        //console.log('click');
         header.classList.toggle('show-nav');
     })
 
@@ -38,7 +38,7 @@ function tabsFilter() {
     }
 
     const showProjects = (elem) => {
-        console.log(elem);
+        //console.log(elem);
         projets.forEach(projet => {
             
             let filter = projet.getAttribute('data-category');
@@ -60,7 +60,7 @@ function tabsFilter() {
         elem.addEventListener('click', (event) => {
             event.preventDefault();
             let filter = elem.getAttribute('data-filter');
-            console.log(filter);
+            //console.log(filter);
             showProjects(filter);
             resetActiveLinks();
             elem.classList.add('active');
@@ -169,7 +169,7 @@ function heroTextAdapter(){
     const windowWidth = window.innerWidth;
     const distanceFromBottom = windowHeight - distanceFromTop;
   
-    console.log(windowWidth);
+    //console.log(windowWidth);
   
     if (windowWidth > 749){
       if (distanceFromBottom >= 0) {
@@ -201,5 +201,52 @@ function heroTextAdapter(){
 window.addEventListener('scroll', heroTextAdapter);
 window.addEventListener('resize', heroTextAdapter);
 
+
+function getCurrentSection() {
+    // Récupération de tous les éléments de section de la page
+    const sections = document.querySelectorAll('section');
+    
+    
+    // Parcours de tous les éléments de section pour trouver celui qui est visible
+    for (let i = 0; i < sections.length; i++) {
+      const section = sections[i];
+      const rect = section.getBoundingClientRect();
+      
+      
+      // Vérification si l'élément de section est visible
+      if (rect.bottom >= 0) {
+
+        return section.getAttribute('data-id');
+      }
+    }
+    
+    // Si aucune section n'est visible, on retourne null
+    return null;
+}
+
+const nav_link = document.querySelectorAll('.header .navbar li a');
+
+function hideCurrentNavLink(){
+
+    //let actual_sect = section.getAttribute('data-id');
+
+    let actual_sect = getCurrentSection();
+
+    nav_link.forEach(link => {
+
+        let sect = link.getAttribute('data-sect');
+
+        if (sect === actual_sect){
+            link.classList.add('hide');
+        }
+        else{
+            link.classList.remove('hide');
+        }
+    })
+
+}
+
+window.addEventListener('scroll', hideCurrentNavLink);
+links.addEventListener('click', hideCurrentNavLink);
 
 

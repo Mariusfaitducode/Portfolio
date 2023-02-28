@@ -19,12 +19,12 @@
 
             <nav class="navbar">
                 <ul class="menu list-unstyled">
-                    <li><a href="#hero">Accueil</a></li>
-                    <li><a href="#apropos">A propos</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#experiences">Expériences</a></li> 
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#hero" data-sect="hero">Accueil</a></li>
+                    <li><a href="#apropos" data-sect="apropos">A propos</a></li>
+                    <li><a href="#competences" data-sect="competences">Compétences</a></li>
+                    <li><a href="#portfolio" data-sect="portfolio">Portfolio</a></li>
+                    <li><a href="#experiences" data-sect="experiences">Expériences</a></li> 
+                    <li><a href="#contact" data-sect="contact">Contact</a></li>
                     <!-- <li><a href="#">Liste</a></li> -->
                 </ul>
             </nav>
@@ -44,7 +44,7 @@
         </div>
     </header>
  
-    <section id="hero" class="hero">
+    <section id="hero" data-id="hero" class="hero">
         <div class="container">
             <div class="grid">
                 
@@ -68,7 +68,7 @@
         </div>
     </section>
 
-    <section id="apropos" class="apropos">
+    <section id="apropos" data-id="apropos" class="apropos">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">A propos</h2>
@@ -126,7 +126,7 @@
     
 
 
-    <section id="competences" class="competences">
+    <section id="competences" data-id="competences" class="competences">
         <div class="container">
             <div class="section-header">
               <h2 class="section-title">Mes compétences</h2>
@@ -184,7 +184,7 @@
         </div>    
 
     </section>
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" data-id="portfolio" class="portfolio">
         <div class="container">
             <div class="section-header">
               <h2 class="section-title">Mon portfolio</h2>
@@ -370,25 +370,25 @@
                                             Je me suis inspiré d'une vidéo de Dimension Code et renseigné plus en précision sur 
                                             <a href="https://fr.wikipedia.org/wiki/Mod%C3%A9lisation_math%C3%A9matique_d%27un_labyrinthe" target="_blank">Wikipédia</a>. 
                                             Il y a 2 algorithmes différents qui permettent de générer le labyrinthe, c'est pourquoi il y a 2 boutons générations.
-                                            Ces 2 méthodes partent d'un labyrinthe où tout les murs sont fermés puis construisent les chemins en cassant les murs,
+                                            Ces 2 méthodes partent d'un labyrinthe où tous les murs sont fermés puis construisent les chemins en cassant les murs,
                                             résultant ainsi à un vrai labyrinthe.  
                                             <br><br>
                                             Le premier utilise <strong>la fusion aléatoire de chemins</strong> : 
                                             Le programme choisit un mur au hasard, 
                                             qu'il casse si les couleurs des 2 cases à côté sont différentes, 
-                                            une fois le mur cassé, la couleurs des cases et de l'ancien mur sont uniformisés.
+                                            une fois le mur cassé, la couleur des cases et de l'ancien mur sont uniformisés.
                                             A la fin du programme il ne reste ainsi plus qu'une seule couleur et le labyrinthe est formé.
                                             <br><br>
                                             
                                             Le deuxième utilise <strong>l'exploration exhaustive</strong> :
                                             L'algorithme part d'une case puis casse un des murs autour de la case de manière aléatoire.
-                                            Il se déplace ensuite à la nouvelle case dévoilé et la marque comme visitée.
-                                            Lorsque une case n'a plus de murs a cassé menant a une case non visitée, l'algorithme retourne à la case précédente.
+                                            Il se déplace ensuite à la nouvelle case dévoilée et la marque comme visitée.
+                                            Lorsque une case n'a plus de mur a casser menant à une case non visitée, l'algorithme retourne à la case précédente.
 
                                             <br><br>
                                             Pour la résolution, il s'agit de <strong>l'algorithme A étoile</strong> qui permet de déterminer le chemin le plus court entre 2 points :
-                                            Cet algorithme donne une évaluation à chaque case pour définir laquelle il doit visiter en priorité.
-                                            Dans notre cas, cette évaluation est réalisé en fonction de la distance qu'il reste à parcourir et du nombre de cases parcouru jusqu'à la case évalué.
+                                            cet algorithme donne une évaluation à chaque case pour définir laquelle il doit visiter en priorité.
+                                            Dans notre cas, cette évaluation est réalisée en fonction de la distance qu'il reste à parcourir et du nombre de cases parcourues jusqu'à la case évaluée.
                                         </p>
 
                                         <h5 class="h3">Technologies</h5>
@@ -1153,7 +1153,7 @@
         </div>
     </section>
 
-    <section id="experiences" class="experiences">
+    <section id="experiences" data-id="experiences" class="experiences">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Mon expérience professionnelle</h2>
@@ -1177,17 +1177,17 @@
                     <p>
                         Animateur au 
                         <a href="https://www.lemoulinnature.fr/" target="_blank">Moulin Nature à Lutterbach</a>. 
-                        Encadrement d’enfants âgés de 6 à 14 ans. 
-                        Organisation d’activités baignades.
+                        Encadrement d'enfants âgés de 6 à 14 ans. 
+                        Organisation d'activités baignades.
                     </p>
                     <h4>Janvier 2021 :</h4>
                     <p>
-                        Stage de 1 mois à l’usine PSA de Mulhouse en poste opérateur.
+                        Stage de 1 mois à l'usine PSA de Mulhouse en poste opérateur.
                     </p>
                     <h4>Juillet 2018 et 2019 :</h4>
                     <p>
                         Animateur au centre de loisirs de Bennwihr pendant 2 étés. 
-                        Encadrement d’enfants âgés de 3 à 12 ans. 
+                        Encadrement d'enfants âgés de 3 à 12 ans. 
                     </p>
                     <h4>Juin 2018</h4>
                     <p>
@@ -1199,7 +1199,7 @@
         </div>
     </section>
 
-    <section id="contact" class="contact">
+    <section id="contact" data-id="contact" class="contact">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Contact</h2>

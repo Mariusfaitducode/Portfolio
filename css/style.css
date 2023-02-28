@@ -166,6 +166,16 @@ section{
     display: inline-flex;
     align-items: center;
     padding: 0 .5rem;
+    transition: all .4s;
+}
+
+.header .navbar li .hide{
+    /* scale: 0; */
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition: all 1s;
+    
 }
 
 .header a{

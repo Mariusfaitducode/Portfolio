@@ -127,7 +127,7 @@ section{
 }
 
 .section-title{
-    margin-top: 0;
+    margin-top: 3rem;
     margin-bottom: 2rem;
     font-size: 3.8rem;
     /* text-transform: uppercase; */
@@ -907,6 +907,10 @@ footer p{
     margin-bottom: 2rem;
 }
 
+.modal iframe{
+    margin-bottom: 2rem;
+}
+
 .modal__title{
     margin: 0 0 2rem;
 }
@@ -915,10 +919,12 @@ footer p{
     position: absolute;
     right: 1rem;
     top: 1rem;
+    margin-top: 2rem;
+    margin-right: 2rem;
     background: none;
     border: 1px solid #eee;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     font-size: 3.1rem;
     color: #666;

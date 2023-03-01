@@ -200,6 +200,7 @@ function heroTextAdapter(){
 
 window.addEventListener('scroll', heroTextAdapter);
 window.addEventListener('resize', heroTextAdapter);
+// window.onbeforeunload(heroTextAdapter);
 // window.addEventListener('refresh', heroTextAdapter);
 
 

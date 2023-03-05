@@ -553,6 +553,7 @@ section{
 .competences .certifications p{
     padding-left: 1rem;
     padding-top: 1rem;
+    max-width: 70%;
 }
 
 

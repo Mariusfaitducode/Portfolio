@@ -559,7 +559,16 @@ section{
 
 .competences img{
     border-radius: 10%;
+    box-shadow: 0 0 7px rgba(0,0,0,0.2);
+    transition: all .4s;
 }
+
+.competences img:hover{
+    border-radius: 20%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+
 
 @media screen and (min-width:750px) {
 

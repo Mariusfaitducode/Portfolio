@@ -9,12 +9,12 @@
     --color-body: #333333;
 
     /* --color-sect_1:#a3d6f6; */
-    --color-sect_1:#add8e6;
+    --color-sect_1:#DDD5CF;
 
-    --color-sect_2:#b3deff;
-    --color-sect_3:#99bfe6;
-    --color-sect_4:#ADD8E6;
-    --color-sect_5: #7ca4c4;
+    --color-sect_2:#C7CDE5;
+    --color-sect_3:#DDD5CF;
+    --color-sect_4:#C7CDE5;
+    --color-sect_5: #DDD5CF;
 }
 
 *{
@@ -482,6 +482,8 @@ section{
     text-align: center;
 }
 
+
+
 @media screen and (min-width:750px) {
     .container{
         max-width: 1200px;
@@ -494,6 +496,11 @@ section{
         /* width: 100%; */
         /* height: auto; */
         max-width: 100%;
+    }
+
+    .presentation.qui-suis-je{
+        padding-left: 200px;
+        padding-right: 200px;    
     }
 }
 

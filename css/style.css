@@ -661,6 +661,9 @@ section{
 }
 
 .card{
+
+    max-height: 350px;
+
     background: #FFF;
     /* border: 1px solid black; */
     text-transform: uppercase;
@@ -672,10 +675,17 @@ section{
     overflow: hidden;
 }
 
-.card__img{
+
+.card img{
+    /* object-fit: fill; */
+    max-height: 243px;
+}
+
+
+/* .card__image{
     width: 100%;
     height: auto;
-}
+} */
 
 .card__category{
     margin: 0;
@@ -956,6 +966,10 @@ footer p{
     opacity: 1;
     transition: all 1s ease;
     padding: 2rem;
+}
+
+.modal ul{
+    margin-left: 20px;
 }
 
 @media screen and (min-width: 750px){

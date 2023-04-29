@@ -536,7 +536,6 @@ section{
 }
 
 
-
 .competences .progressbar{
     background: lightgrey;
     /* border: 1px solid black; */
@@ -555,6 +554,18 @@ section{
     padding: .9rem 2rem;
 } */
 
+.competences .skills{
+    display : flex;
+}
+
+.competences .skills-item{
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .competences .certifications a{
     display: flex;
 }
@@ -566,13 +577,13 @@ section{
 }
 
 
-.competences img{
+.competences .certifications img{
     border-radius: 10%;
     box-shadow: 0 0 7px rgba(0,0,0,0.2);
     transition: all .4s;
 }
 
-.competences img:hover{
+.competences .certifications img:hover{
     border-radius: 20%;
     box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
@@ -584,6 +595,13 @@ section{
     .competences .grid{
         justify-content: space-around;
         align-items: baseline;
+    }
+    .competences .grid .left{
+        width: 60%;
+    }
+    
+    .competences .grid .right{
+        width: 40%;
     }
 }
 
@@ -677,7 +695,7 @@ section{
 
 
 .card img{
-    /* object-fit: fill; */
+    object-fit: contain;
     max-height: 243px;
 }
 
@@ -946,8 +964,8 @@ footer p{
 
 .modal__close{
     position: absolute;
-    right: 1rem;
-    top: 1rem;
+    right: 3rem;
+    top: 2rem;
     margin-top: 2rem;
     margin-right: 2rem;
     background: none;
@@ -958,6 +976,7 @@ footer p{
     font-size: 3.1rem;
     color: #666;
     cursor: pointer;
+    padding-bottom: 4px;
 }
 
 .modal .grid__item{

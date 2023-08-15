@@ -9,10 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
         for (var i = 0; i < numColumns * numRows; i++) {
             var cell = document.createElement('div');
             cell.classList.add('cell');
-            cell.style.width = "".concat(cellSize, "px");
-            cell.style.height = "".concat(cellSize, "px");
             gameContainer.appendChild(cell);
         }
+        adjustCellSize();
     }
     function adjustCellSize() {
         var cellSize = 0;

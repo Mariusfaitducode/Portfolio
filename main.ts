@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const cell = document.createElement('div');
             cell.classList.add('cell');
 
-            cell.style.width = `${cellSize}px`;
-            cell.style.height = `${cellSize}px`;
             gameContainer.appendChild(cell);
         }
+
+        adjustCellSize();
     }
 
     function adjustCellSize() {

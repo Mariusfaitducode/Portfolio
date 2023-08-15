@@ -1,0 +1,84 @@
+/* FOOTER */
+
+footer{
+    background: #000;
+    color: #EEE;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+footer .grid{
+    align-items: center;
+}
+
+footer .socials{
+    justify-content: center;
+    text-align: center;
+}
+
+footer .socials li{
+    padding: 0.7rem;
+}
+
+footer .socials a{
+    width: 42px;
+    height: 42px;
+    fill: #FFF;
+    border: 1px solid #EEE;
+    border-radius: 50%;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    transition: all .4s;
+}
+
+footer .socials a:hover{
+    background: #FFF;
+    fill: black;
+}
+
+footer .socials .icon{
+    
+    width: 25px;
+    height: 25px;
+}
+
+footer p{
+    margin: 0;
+}
+
+@media screen and (max-width:749px){
+    
+    footer .grid__item{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:750px){
+    
+    footer{
+        text-align: left;
+    }
+
+    footer .grid__item{
+        width: 33%;
+    }
+}
+
+@keyframes slideInleft {
+    from{
+        transform: translateX(-110%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInright {
+    from{
+        transform: translateX(110%);
+    }
+    to{
+        transform: translateX(0);
+    }
+}

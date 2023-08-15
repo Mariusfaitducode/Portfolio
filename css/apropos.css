@@ -1,0 +1,58 @@
+/* A PROPOS */
+
+.apropos{
+    /* padding-top: 0; */
+    /* background-color:rgb(184,228,228) ; */
+    background-color:var(--color-sect_1);
+    justify-content: center;
+    /* z-index: 1; */
+}
+
+.apropos .presentation{
+    text-align: center;
+}
+
+
+
+@media screen and (min-width:750px) {
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+        /* background: black */
+    }
+
+    .apropos .grid__item{
+        /* width: 100%; */
+        /* height: auto; */
+        max-width: 100%;
+    }
+
+    .presentation.qui-suis-je{
+        padding-left: 200px;
+        padding-right: 200px;    
+    }
+}
+
+/* .presentation p{
+    margin-bottom: 2rem;
+} */
+
+
+
+.presentation h4{
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (min-width:750px) {
+
+    .presentation .grid{
+        align-items: baseline;
+    }
+    .presentation .stage{
+        width: 50%;
+        padding: 1rem;
+    }
+    
+}

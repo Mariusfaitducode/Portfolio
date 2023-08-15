@@ -6,11 +6,17 @@
 
 :root{
 
+    --white: #ffffff;
+
     --black: #000000;
     
     --color-body: #333333;
 
     --dark-blue: #202746;
+
+    --blue: #7FDEFF;
+
+    --light-blue: #D5D9EC;
 
 }
 
@@ -30,7 +36,7 @@ body{
     font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.6rem;
     line-height: 1.6;
-    color:  #555;
+    color:  var(--white);
     margin: 0;
     /* pointer-events: none; */
     /* text-align: center; */
@@ -40,15 +46,12 @@ h1, h2, h3, h4, h5, h6{
     /* color: #333; */
     font-family: Poppins, sans-serif;
     /* font-weight: 500; */
-    color:black;
+    color: var(--white);
     line-height: 1;
     margin-bottom: 1rem;
 }
 
-h2, .h2{
-    font-size: 2.8rem;
-    text-transform: uppercase;
-}
+
   
 h3,  .h3{
     font-size: 2.1rem;
@@ -120,9 +123,7 @@ img{
 
 
 .section-title{
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    font-size: 3.8rem;
+    
     /* text-transform: uppercase; */
 }
 

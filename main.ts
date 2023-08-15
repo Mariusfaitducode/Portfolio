@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const numColumns = 30; // Nombre de colonnes
         const numRows = 30; // Nombre de lignes
 
-        const cellSize = window.innerWidth / 30; // Taille d'une cellule en pixels
 
         
         

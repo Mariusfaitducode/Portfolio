@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var _loop_2 = function (col) {
                 var cell = document.createElement('div');
                 cell.classList.add('cell');
-                cell.addEventListener('click', function () { return toggleCellState(row, col, cell); });
+                cell.addEventListener('mouseover', function () { return toggleCellState(row, col, cell); });
                 gameContainer.appendChild(cell);
             };
             for (var col = 0; col < numColumns; col++) {

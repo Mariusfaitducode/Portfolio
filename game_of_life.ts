@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const cell = document.createElement('div');
                 cell.classList.add('cell');
 
-                cell.addEventListener('click', () => toggleCellState(row, col, cell));
+                cell.addEventListener('mouseover', () => toggleCellState(row, col, cell));
 
                 gameContainer.appendChild(cell);
                 

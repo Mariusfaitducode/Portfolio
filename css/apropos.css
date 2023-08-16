@@ -1,7 +1,7 @@
 /* A PROPOS */
 
 .apropos{
-    /* padding-top: 0; */
+    
     
     background-color: var(--light-blue);
     color: var(--black);
@@ -12,8 +12,9 @@
 }
 
 .apropos-text{
-    margin-left: 50px;
-    padding-top: 50px;
+    margin-left: 80px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     width: 50%;
 }
@@ -34,15 +35,17 @@
 
 
 
-.apropos-image{
+.apropos img{
     width: 40%;
-    /* height: 300px; */
+    max-width: 600px;
+    
+
+    object-fit: cover;
 
     /* width: 300px;
     height: 200px; */
     /* background-image: linear-gradient(to right, var(--light-blue) 0%, rgba(0, 0, 0, 0) 5%), 
                         url('../img/profil/ProfilNaxos2.jpeg');*/
-    background-size: cover;
-    background-position: center; 
+
 
 }

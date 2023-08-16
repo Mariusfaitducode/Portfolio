@@ -2,7 +2,7 @@
 
 .portfolio{
     /* background-color:rgb(252,212,159); */
-    background-color:var(--dark-blue);
+    background-color:var(--dark-blue-2);
     /* padding-left: 50px;
     padding-right: 50px; */
     padding-bottom: 100px;
@@ -90,17 +90,17 @@
 
     max-height: 100%;
 
-    background: var(--dark-blue-2);
+    background: var(--light-blue);
     /* border: 1px solid black; */
     text-transform: uppercase;
-    margin: 1rem;
+    margin: 20px;
     position: relative;
     box-shadow: 0 0 7px rgba(0,0,0,0.5);
     /* border: 1px solid var(--black); */
 
     overflow: hidden;
 
-    color: var(--white);
+    color: var(--black);
 
     transition: all ease-in-out .3s;
 }

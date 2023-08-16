@@ -24,7 +24,7 @@
 
 .portfolio .projects-container{
 
-    max-width: 1260px;
+    max-width: 1200px;
     margin: auto;
     
     display: grid;
@@ -82,8 +82,8 @@
 
 .card{
 
-    width: 380px;
-    height: 460px;
+    width: 360px;
+    height: 420px;
 
     border-radius: 5%;
 

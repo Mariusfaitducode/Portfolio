@@ -2,30 +2,50 @@
 
 
 .competences{
-    background-color: var(--color-sect_2);
+    background-color: var(--light-blue);
+}
+
+.competences-header{
+    display: flex;
+    justify-content: center;
+}
+
+.competences h2{
+    padding-top: 100px;
+    margin-bottom: 80px;
+}
+
+.competences-container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+.competences h3{
+    font-size: 3rem;
+    margin-bottom: 40px;
 }
 
 
-.competences .progressbar{
-    background: lightgrey;
-    /* border: 1px solid black; */
-    color: white;
-    margin-bottom: 1rem;
-}
 
-.competences .bar{
-    background-color: #333;
-    padding: 1rem;
-}
 
-/* .competences li {
-    background-color: lightgray;
-    border-left: 3px solid rgb(91, 107, 120);
-    padding: .9rem 2rem;
-} */
+
 
 .competences .skills{
     display : flex;
+
+    justify-content: space-around;
+
+    width: 800px;
+    padding: 10px;
+
+    /* border: 1px solid black; */
+    box-shadow: 0 0 7px rgba(0,0,0,0.5);
+
+    border-radius: 15px;
+
+    margin-bottom: 50px;
 }
 
 .competences .skills-item{
@@ -60,17 +80,4 @@
 
 
 
-@media screen and (min-width:750px) {
 
-    .competences .grid{
-        justify-content: space-around;
-        align-items: baseline;
-    }
-    .competences .grid .left{
-        width: 60%;
-    }
-    
-    .competences .grid .right{
-        width: 40%;
-    }
-}

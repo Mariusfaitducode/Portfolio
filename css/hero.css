@@ -26,6 +26,8 @@
     border: 1px solid var(--dark-blue);
     box-sizing: border-box;
     background-color: var(--black);
+
+    transition: 0.2s all ease-in-out;
 }
 
 .alive{
@@ -55,6 +57,8 @@
     font-size: 6rem;
 
     text-transform: uppercase;
+
+    color: var(--white);
     
 }
 

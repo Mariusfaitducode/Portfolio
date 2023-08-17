@@ -6,9 +6,13 @@
 
 :root{
 
+    --gray: #333;
+
     --white: #ffffff;
 
     --black: #000000;
+
+    --transparent-black: rgb(0, 0, 0, 0.6);
     
     --color-body: #333333;
 
@@ -54,19 +58,25 @@ h1, h2, h3, h4, h5, h6{
 
 
 h2{
-    font-size: 4rem;
+    font-size: 4.5rem;
 }
 
   
-h3,  .h3{
-    font-size: 2.1rem;
+h3{
+    font-size: 3rem;
     margin-top: 1rem;
     margin-bottom: 3rem;
 }
 
-/* p{
-    margin-bottom: 2rem;
-} */
+h4{
+    font-size: 2.2rem;
+}
+
+
+
+p{
+    font-size: 1.8rem;
+}
 
 a{
     text-decoration: none;

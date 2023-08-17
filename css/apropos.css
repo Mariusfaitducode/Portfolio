@@ -15,7 +15,9 @@
 }
 
 .apropos-text{
-    margin-left: 80px;
+
+    margin-left: 10%;
+    margin-right: 10%;
     padding-top: 100px;
     padding-bottom: 100px;
 
@@ -23,16 +25,24 @@
 }
 
 .apropos-text h2{
-    margin-bottom: 25px;
+    margin-bottom: 40px;
 }
 
 .apropos-text h3{
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 50px;
+    margin-bottom: 40px;
 }
 
 .apropos-text h4{
     margin-top: 30px;
+   
+}
+
+.apropos-text .stage-date{
+    color: var(--gray);
+    font-weight: 600;
+
+    margin-bottom: 20px;
    
 }
 

@@ -1,15 +1,13 @@
 /* HERO */
 
 
-
-
-
-
-
 .game-container{
 
-    /* position: fixed; */
-    /* z-index: -10; */
+    position: fixed;
+    z-index: 0;
+
+    top: 0;
+    left: 0;
     
     display: grid;
     background-color: var(--dark-blue);
@@ -17,6 +15,13 @@
     height: 100vh;
 
     overflow: hidden;
+}
+
+.espacement{
+    height: 100vh;
+    width: 0px;
+    background: red;
+    z-index: -50;
 }
 
 

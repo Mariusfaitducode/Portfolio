@@ -1,0 +1,76 @@
+
+
+
+/* CONTACT */
+
+.contact{
+    /* background:rgb(205,138,222); */
+    /* background-color: var(--dark-blue-2); */
+    color: var(--white);
+
+    position: relative;
+    z-index: 2;
+
+    /* margin-bottom: 200px; */
+
+    height: 100vh;
+}
+
+.contact-header{
+    display: flex;
+    justify-content: center;
+}
+
+.contact-header h2{
+    padding-top: 100px;
+    padding-bottom: 80px;
+
+    color: var(--white);
+    
+}
+
+.contact-container{
+
+    display: flex;
+
+    justify-content: center;
+
+    transition: all 1s ease-in-out;
+
+    gap:40px;
+    
+}
+
+.contact-link{
+
+    
+
+    background-color: var(--dark-blue);
+
+    padding: 20px;
+    
+
+    
+
+    border-radius: 15px;
+
+    
+
+    transition: all 0.5s ease-in-out;
+
+    
+
+    /* transition: all 1s; */
+
+}
+
+
+.contact-link:hover{
+    
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 7px rgba(255, 252, 252, 0.2);
+    
+}
+
+

@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Marius Diguat Portfolio</title>
     <link rel="icon" type="image/x-icon" href="img/profil/Logo-Marius-Ico_1.ico">
 
     <link rel="stylesheet" href="./css/style.css">
@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./css/apropos.css">
     <link rel="stylesheet" href="./css/portfolio.css">
     <link rel="stylesheet" href="./css/competences.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <script src="./game_of_life.js" defer></script>
 </head>
 
@@ -42,15 +44,19 @@
         <div class="game-container">
 
             <div class="content">
-                <span>Je suis</span>
+                <!-- <span>Je suis</span>
                 <h1 class="name">Marius <br>Diguat--Mateus.</h1>
-                <h2 class="title">Etudiant ingénieur en informatique </h2>
+                <h2 class="title">Etudiant ingénieur en informatique </h2> -->
                 
                 <!-- <a href="CV Marius DIGUAT-MATEUS.pdf" target="_blank" class="btn">Mon CV</a> -->
     
             </div>
             
         </div>
+        <div class="espacement">
+
+        </div>
+        
 
         
          
@@ -1469,6 +1475,10 @@
                     <img src="./img/skills/Angular.svg" width="80px"alt="JavaScript">
                     <span>Angular</span>
                 </div>
+                <div class="skills-item">
+                    <img src="./img/skills/Sql.svg" width="80px"alt="JavaScript">
+                    <span>SQL</span>
+                </div>
             </div>
 
             <h3>Outils</h3>
@@ -1495,37 +1505,38 @@
             </div>
             
             
-                    <h3>Mes certifications</h3>
-                    <ul class="certifications list-unstyled">
-                        <li>
-                            <a href="https://courses.nvidia.com/certificates/dfa96da549534c0e8f08d71dd27b33c5/" target="_blank">
-                                
-                                <img src="img/certifications/nvidia.jpg" loading="lazy" width="100" height="100" alt="certification nvidia">
-                                <p>Nvidia : Fundamentals of Accelerated Computing with CUDA Python</p>
-                                
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./certifs/MariusDIGUAT--MATEUS-RE4E Introducti-certificate.pdf" target="_blank">
-                                
-                                <img src="img/certifications/re4e.jpg" loading="lazy" width="100" height="100" alt="certification cisco">
-                                <p>Cisco CCNA 1 : Introduction to Networks</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./certifs/MariusDIGUAT--MATEUS-RE4f-2022-certificate-1.pdf" target="_blank">
-                                <img src="img/certifications/re4f.jpg" loading="lazy" width="100" height="100" alt="certification cisco">
-                                <p>Cisco CCNA 2 : Switching Routing & Wireless Essentials</p>
-                            </a>
-                        </li>
-                    </ul>
+            <h3>Mes certifications</h3>
+
+            <div class="skills">
+                
+                <a href="https://courses.nvidia.com/certificates/dfa96da549534c0e8f08d71dd27b33c5/" target="_blank" class="certif">
+                    
+                    <img src="img/certifications/nvidia.jpg" loading="lazy" width="100" height="100" alt="certification nvidia">
+                    <p>Nvidia : Fundamentals of Accelerated Computing with CUDA Python</p>
+                    
+                </a>
+            
+            
+                <a href="./certifs/MariusDIGUAT--MATEUS-RE4E Introducti-certificate.pdf" target="_blank" class="certif">
+                    
+                    <img src="img/certifications/re4e.jpg" loading="lazy" width="100" height="100" alt="certification cisco">
+                    <p>Cisco CCNA 1 : Introduction to Networks</p>
+                </a>
+            
+            
+                <a href="./certifs/MariusDIGUAT--MATEUS-RE4f-2022-certificate-1.pdf" target="_blank" class="certif">
+                    <img src="img/certifications/re4f.jpg" loading="lazy" width="100" height="100" alt="certification cisco">
+                    <p>Cisco CCNA 2 : Switching Routing & Wireless Essentials</p>
+                </a>
+            
+            </div>
              
             
         </div>    
 
     </section>
 
-    <section id="experiences" data-id="experiences" class="experiences">
+    <!-- <section id="experiences" data-id="experiences" class="experiences">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Mon expérience professionnelle</h2>
@@ -1535,9 +1546,7 @@
                 </p>
             </div>
             <div class="grid">
-                <!-- <div class="project left">
-                    <img src="./img/profil/ProfilMoulin.jpg" alt="">
-                </div> -->
+                
                 <div class="project right">
                     
                     <h4>Depuis septembre 2022 :</h4>
@@ -1569,7 +1578,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
 
     <!-- <section id="loisirs" data-id="loisirs" class="loisirs">
         <div class="container">
@@ -1598,60 +1607,41 @@
     </section> -->
 
     <section id="contact" data-id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contact</h2>
-                <p>Si vous êtes intérressé par mon profil, n'hésitez pas à m'envoyer un message</p>
+
+        
+        
+            <div class="contact-header">
+                <h2 class="section-title">Me contacter</h2>
+                <!-- <p>Si vous êtes intérressé par mon profil, n'hésitez pas à m'envoyer un message</p> -->
             </div>
-            <form action="https://formsubmit.co/marius.diguat--mateus@utbm.fr" method="POST" class="form">
 
-                <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_next" value="https://skatezen.github.io/First_Portfolio/thanks.html">
+            <div class="contact-container">
+                <a href="mailto:marius.diguat--mateus@utbm.fr" class="contact-link">
+                    <img src="./img/contact/mail.svg" width="80px"alt="Python">
+                    <!-- <p>marius.diguat--mateus@utbm.fr</p> -->
+                </a>
+                <a href="https://www.linkedin.com/in/marius-diguat-mateus-1375231bb/" target="_blank" class="contact-link">
+                    <img src="./img/contact/Linkedin.svg" width="80px"alt="Python">
+                </a>
+                <a href="https://github.com/SkateZen" target="_blank" class="contact-link">
+                    <img src="./img/contact/Github.svg" width="80px"alt="Python">
+                </a>
+            </div>
 
-
-                <label for="firstname">
-                    <input type="text" name="firstname" id="firstname" placeholder="Nom" required>
-                </label>
-                <label for="lastname">
-                    <input type="text" name="lastname" id="lastname" placeholder="Prénom">
-                </label>
-                <label for="email">
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                </label>
-                <label for="firstname">
-                    <textarea name="message" id="message" placeholder="Message"></textarea>
-                </label>
-                <input type="submit" class="btn" value="Envoyer">
-            </form>
-        </div>
+            <footer>
+        
+                <p>Merci d'avoir parcouru mon portfolio jusqu'au bout, 
+                   <br> je l'ai réalisé en Html, Css et Typescript.</p>
+                
+                <p>Copyright © 2023 Marius Diguat--Mateus. All Rights Reserved.</p>
+                
+               
+            </footer>
+            
+        
     </section>
 
-    <footer>
-        <div class="container">
-            <div class="grid">
-                <div class="project">
-                    <p>Diguat--Mateus Marius</p>
-                </div>
-                <div class="project">
-                    <ul class="socials list-unstyled">
-                        <li><a href="https://www.linkedin.com/in/marius-diguat-mateus-1375231bb" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px">    <path d="M 8 3.0097656 C 4.53 3.0097656 2.0097656 5.0892187 2.0097656 7.9492188 C 2.0097656 10.819219 4.59 12.990234 8 12.990234 C 11.47 12.990234 13.990234 10.870625 13.990234 7.890625 C 13.830234 5.020625 11.36 3.0097656 8 3.0097656 z M 3 15 C 2.45 15 2 15.45 2 16 L 2 45 C 2 45.55 2.45 46 3 46 L 13 46 C 13.55 46 14 45.55 14 45 L 14 16 C 14 15.45 13.55 15 13 15 L 3 15 z M 18 15 C 17.45 15 17 15.45 17 16 L 17 45 C 17 45.55 17.45 46 18 46 L 27 46 C 27.552 46 28 45.552 28 45 L 28 30 L 28 29.75 L 28 29.5 C 28 27.13 29.820625 25.199531 32.140625 25.019531 C 32.260625 24.999531 32.38 25 32.5 25 C 32.62 25 32.739375 24.999531 32.859375 25.019531 C 35.179375 25.199531 37 27.13 37 29.5 L 37 45 C 37 45.552 37.448 46 38 46 L 47 46 C 47.55 46 48 45.55 48 45 L 48 28 C 48 21.53 44.529063 15 36.789062 15 C 33.269062 15 30.61 16.360234 29 17.490234 L 29 16 C 29 15.45 28.55 15 28 15 L 18 15 z"/></svg> -->
-                            <!-- <svg class="icon linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg> -->
-                        </i></a></li>
     
-                        <li><a href="https://github.com/SkateZen" target="_blank">
-                            <svg class="icon github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                        </i></a></li>
-                    </ul>
-                </div>
-                <div class="project">
-                    <p>Copyright © 2022 Marius Portfolio. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
     
 </body>
 </html>

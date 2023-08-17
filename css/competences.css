@@ -3,6 +3,10 @@
 
 .competences{
     background-color: var(--light-blue);
+    padding-bottom: 100px;
+
+    position: relative;
+    z-index: 2;
 }
 
 .competences-header{
@@ -35,10 +39,10 @@
 .competences .skills{
     display : flex;
 
-    justify-content: space-around;
+    justify-content: center;
 
     width: 800px;
-    padding: 10px;
+    padding: 20px;
 
     /* border: 1px solid black; */
     box-shadow: 0 0 7px rgba(0,0,0,0.5);
@@ -49,33 +53,42 @@
 }
 
 .competences .skills-item{
-    margin-right: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.competences .certifications a{
+.competences .certif{
     display: flex;
+    margin-right: 40px;
 }
 
-.competences .certifications p{
+.competences .certif p{
     padding-left: 1rem;
     padding-top: 1rem;
-    max-width: 70%;
+
+    overflow: hidden;
+    width: 0px;
+    height: 0px;
+    transition: width 0.5s ease-in-out;
+
+    
 }
 
 
-.competences .certifications img{
+.competences .certif img{
     border-radius: 10%;
     box-shadow: 0 0 7px rgba(0,0,0,0.2);
-    transition: all .4s;
+    
 }
 
-.competences .certifications img:hover{
-    border-radius: 20%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+.competences .certif:hover p{
+
+    width: 220px;
+    height: 100px;
 }
 
 

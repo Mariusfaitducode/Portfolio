@@ -8,20 +8,33 @@
     /* background-color: var(--dark-blue-2); */
     color: var(--white);
 
-    position: relative;
-    z-index: 2;
+    /* position: relative;
+    z-index: 2; */
 
     /* margin-bottom: 200px; */
+
+    /* width: 500px; */
 
     height: 100vh;
 }
 
 .contact-header{
+    
     display: flex;
     justify-content: center;
 }
 
+.contact-content{
+    
+    display: flex;
+    justify-content: center;
+
+    margin-top: 300px;
+}
+
 .contact-header h2{
+    position: absolute;
+    
     padding-top: 100px;
     padding-bottom: 80px;
 
@@ -31,6 +44,8 @@
 
 .contact-container{
 
+    position: absolute;
+
     display: flex;
 
     justify-content: center;
@@ -38,10 +53,13 @@
     transition: all 1s ease-in-out;
 
     gap:40px;
+
     
 }
 
 .contact-link{
+
+    
 
     
 

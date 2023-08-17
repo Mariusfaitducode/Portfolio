@@ -1,13 +1,21 @@
 /* FOOTER */
 
+.bottom{
+    position: relative;
+    bottom: 0;
+}
+
 footer{
-    background: #000;
-    color: #EEE;
+    background: var(--light-blue);
+    color: var(--black);
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    font-weight: 500;
 
     position: absolute;
-    bottom: 0;
+    
+    transform: translate(0px, -200px);
+    
     z-index: 2;
 
     width: 100%;
@@ -16,6 +24,6 @@ footer{
 }
 
 footer p{
-    padding-top: 50px;
+    padding-top: 40px;
 }
 

@@ -2,50 +2,47 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const gameContainer = document.querySelector('.game-container') as HTMLElement;
+    const header = document.querySelector('.header') as HTMLElement;
 
-    if (gameContainer) {
+    const burger = document.querySelector('.burger-menu') as HTMLElement;
+    const exit = document.querySelector('.exit-menu') as HTMLElement;
+    const menu = document.querySelector('.menu') as HTMLElement;
 
-        const numColumns = 30; // Nombre de colonnes
-        const numRows = 30; // Nombre de lignes
+    burger.addEventListener('click', () => openMenu());
+    exit.addEventListener('click', () => closeMenu());
 
 
-        
-        
-        gameContainer.style.gridTemplateColumns = `repeat(${numColumns}, 1fr)`;
-        gameContainer.style.gridTemplateRows = `repeat(${numRows}, 1fr)`;
+    function openMenu(){
+        console.log("click")
+        burger.classList.add("hide");
+        exit.classList.remove("hide");
+        menu.classList.remove("hide-menu");
+    }
+
+    function closeMenu(){
+        console.log("click")
+        exit.classList.add("hide");
+        menu.classList.add("hide-menu");
+        burger.classList.remove("hide");
+
+    }
+
+    let lastScrollPosition = 0;
+
+    window.addEventListener("scroll", () => hideMenu());
+
+    function hideMenu(){
+        const currentScrollPosition = window.scrollY;
+
+        if (currentScrollPosition > lastScrollPosition) {
+            header.style.top = "-90px"; // Masquer le menu
+        } else {
+            header.style.top = "0"; // Afficher le menu
+        }
+
+        lastScrollPosition = currentScrollPosition;
+    }
     
-        for (let i = 0; i < numColumns * numRows; i++) {
-            const cell = document.createElement('div');
-            cell.classList.add('cell');
-
-            gameContainer.appendChild(cell);
-        }
-
-        adjustCellSize();
-    }
-
-    function adjustCellSize() {
-
-        var cellSize = 0;
-
-        if (innerWidth / innerHeight > 1){
-            cellSize = window.innerWidth / 30; // Taille d'une cellule en pixels
-        }
-        else{
-            cellSize = window.innerHeight / 30; // Taille d'une cellule en pixels
-        }
-
-        
-        const cells = document.querySelectorAll('.cell') as NodeListOf<HTMLElement>;
-        cells.forEach(cell => {
-            cell.style.width = `${cellSize}px`;
-            cell.style.height = `${cellSize}px`;
-        });
-    }
-
-
-    window.addEventListener('resize', adjustCellSize);
 
   });
   

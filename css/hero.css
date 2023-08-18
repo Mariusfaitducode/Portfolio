@@ -1,0 +1,89 @@
+/* HERO */
+
+
+.game-container{
+
+    position: fixed;
+    z-index: 0;
+
+    top: 0;
+    left: 0;
+    
+    display: grid;
+    background-color: var(--dark-blue);
+
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+.espacement{
+    height: 100vh;
+    width: 0px;
+    background: red;
+    z-index: -50;
+}
+
+
+.cell{
+    /* width: 40px;
+    height: 40px; */
+    border: 1px solid var(--dark-blue);
+    box-sizing: border-box;
+    background-color: var(--black);
+
+    transition: 0.3s all ease-in-out;
+}
+
+.alive{
+    background-color: var(--dark-blue-2);
+}
+
+.content{
+    position: absolute;
+
+    margin-top: 200px;
+    margin-left: 120px;
+
+    /* background-color: var(--transparent-black); */
+
+    /* width: 600px; */
+    max-width: 60%;
+    
+}
+
+.content span{
+    color: var(--white);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 5px;
+}
+
+.name{
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+    font-size: 6rem;
+
+    text-transform: uppercase;
+
+    color: var(--white);
+    
+}
+
+.title{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+
+    color: var(--blue);
+
+    /* text-transform: uppercase; */
+}
+
+@media screen and (max-width:900px) {
+
+    .content{
+        margin-top: 150px;
+        margin-left: 50px;
+    }
+}

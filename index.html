@@ -3,293 +3,183 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Marius Diguat Portfolio</title>
     <link rel="icon" type="image/x-icon" href="img/profil/Logo-Marius-Ico_1.ico">
 
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/global.js" defer></script>
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/apropos.css">
+    <link rel="stylesheet" href="./css/portfolio.css">
+    <link rel="stylesheet" href="./css/competences.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <script src="./game_of_life.js" defer></script>
+    <script src="./main.js" defer></script>
 </head>
 
 <!-- Pensez à changer taille images -->
 
 <body>
     <header class="header">
-        <div class="container D-Flex">
-            <div class="logo">
-                <a href="#hero">
-                    <img src="img/profil/Logo Marius.png" width="70" height="70" alt="logo">
-                </a>
-                
-            </div>
+        
+        <a href="#hero" class="logo">
+            <img src="img/profil/Logo Marius.png" width="70" height="70" alt="logo">
+        </a>
+            
+      
+        <ul class="menu hide-menu">
+            <li><a href="#hero" data-sect="hero">Accueil</a></li>
+            <li><a href="#apropos" data-sect="apropos">A propos</a></li>
+            <li><a href="#portfolio" data-sect="portfolio">Portfolio</a></li>
+            <li><a href="#competences" data-sect="competences">Compétences</a></li>
+            
+            <!-- <li><a href="#experiences" data-sect="experiences">Expériences</a></li>  -->
+            <li><a href="#contact" data-sect="contact">Contact</a></li>
+        </ul>
+            
+        <div class="burger-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
 
-            <nav class="navbar">
-                <ul class="menu list-unstyled">
-                    <li><a href="#hero" data-sect="hero">Accueil</a></li>
-                    <li><a href="#apropos" data-sect="apropos">A propos</a></li>
-                    <li><a href="#competences" data-sect="competences">Compétences</a></li>
-                    <li><a href="#portfolio" data-sect="portfolio">Portfolio</a></li>
-                    <li><a href="#experiences" data-sect="experiences">Expériences</a></li> 
-                    <li><a href="#contact" data-sect="contact">Contact</a></li>
-                    <!-- <li><a href="#">Liste</a></li> -->
-                </ul>
-            </nav>
-            <div class="right">
-                <ul class="socials list-unstyled">
-                    <li><a href="https://www.linkedin.com/in/marius-diguat-mateus-1375231bb" target="_blank">
-                        <svg  class="icon linkedin" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
-                    </i></a></li>
-
-                    <li><a href="https://github.com/SkateZen" target="_blank">
-                        <svg  class="icon github" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                    </i></a></li>
-                    
-                </ul>
-                <button class="burger"><span class="bar"></span></button>
-            </div>
         </div>
+
+        <div class="exit-menu hide">
+
+            <svg viewBox="0 0 25 25"xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.96967 16.4697C6.67678 16.7626 6.67678 17.2374 6.96967 17.5303C7.26256 17.8232 7.73744 17.8232 8.03033 17.5303L6.96967 16.4697ZM13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697L13.0303 12.5303ZM11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303L11.9697 11.4697ZM18.0303 7.53033C18.3232 7.23744 18.3232 6.76256 18.0303 6.46967C17.7374 6.17678 17.2626 6.17678 16.9697 6.46967L18.0303 7.53033ZM13.0303 11.4697C12.7374 11.1768 12.2626 11.1768 11.9697 11.4697C11.6768 11.7626 11.6768 12.2374 11.9697 12.5303L13.0303 11.4697ZM16.9697 17.5303C17.2626 17.8232 17.7374 17.8232 18.0303 17.5303C18.3232 17.2374 18.3232 16.7626 18.0303 16.4697L16.9697 17.5303ZM11.9697 12.5303C12.2626 12.8232 12.7374 12.8232 13.0303 12.5303C13.3232 12.2374 13.3232 11.7626 13.0303 11.4697L11.9697 12.5303ZM8.03033 6.46967C7.73744 6.17678 7.26256 6.17678 6.96967 6.46967C6.67678 6.76256 6.67678 7.23744 6.96967 7.53033L8.03033 6.46967ZM8.03033 17.5303L13.0303 12.5303L11.9697 11.4697L6.96967 16.4697L8.03033 17.5303ZM13.0303 12.5303L18.0303 7.53033L16.9697 6.46967L11.9697 11.4697L13.0303 12.5303ZM11.9697 12.5303L16.9697 17.5303L18.0303 16.4697L13.0303 11.4697L11.9697 12.5303ZM13.0303 11.4697L8.03033 6.46967L6.96967 7.53033L11.9697 12.5303L13.0303 11.4697Z"/>
+            </svg>
+
+
+        </div>
+            
+        
     </header>
  
-    <section id="hero" data-id="hero" class="hero">
-        <div class="container">
-            <div class="grid">
+    <section id="hero">
+        
+        <div class="game-container">
+
+            
+            
+        </div>
+        <div class="espacement">
+            <div class="content">
+                <span>Je suis</span>
+                <h1 class="name">Marius <br>Diguat--Mateus.</h1>
+                <h2 class="title">Etudiant ingénieur en informatique </h2>
                 
-                
-                <div class="hero__item left">
-                    <!-- <span>Etudiant en Informatique</span> -->
-                    <h1 class="title">Hello, Je suis Marius</h1>
-                    <p>
-                        Etudiant à l'<a href="https://www.utbm.fr/" target="_blank">Université Technologique de Belfort-Montbéliard</a>
-                        spécialisé en informatique. Je suis passionné de programmation 
-                        et j'aime me lancer dans de nouveaux projets
-                    </p>
-                    <a href="CV Marius DIGUAT-MATEUS.pdf" target="_blank" class="btn">Mon CV</a>
-                </div>
-                <div class="hero__item right">
-                    <div class="hero__avatar">
-                        <img src="img/profil/ProfilNaxos2.jpeg" loading="lazy" width="400" height="400" alt="Marius sur le mont Naxos">
-                    </div>
-                </div>
+                <!-- <a href="CV Marius DIGUAT-MATEUS.pdf" target="_blank" class="btn">Mon CV</a> -->
+    
             </div>
         </div>
+        
+
+        
+         
+            
+        
     </section>
 
     <section id="apropos" data-id="apropos" class="apropos">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">A propos</h2>
-            </div>
-            <div class="grid">
-                <div class="grid__item">
-                    <div class="presentation qui-suis-je">
-                        <h3>Qui suis-je ?</h3>
-                        <p>Je m'appelle Marius Diguat--Mateus, j'ai 20 ans et je poursuis actuellement ma troisième année d'études en école d'ingénieur au sein de l'UTBM.
-                            Durant les 2 premières années de tronc commun, j'ai découvert la programmation informatique qui a été pour moi comme une révélation. 
-                            Maintenant en branche informatique, je découvre davantage ce vaste monde et j'aimerais me spécialiser dans le domaine de l'intelligence artificielle. 
-                        </p>
-                    </div>
-                </div>
-                <div class="grid__item">
-                    
-                    <div class="presentation">
-                        <h3>Mes aspirations professionnelles</h3>
 
-                        <div class="grid">
-                            
-                            <div class="stage left">
-                                <h4>Stage de mi-parcours</h4>
-                                <h5>Septembre 2023 - Février 2024</h5>
-                                <p>
-                                    <!-- Après une première année d'études en branche informatique, j'aurais un stage de 6 mois à faire en tant qu'assistant ingénieur.
-                                    Je souhaiterai trouver un stage axé sur la programmation où je pourrais apporter une réelle aide à l'entreprise tout en étant assez accompagné
-                                    pour pouvoir apprendre le plus possible. -->
+        <div class="apropos-text">
 
-                                    Après une première année d'études en branche informatique, j'ai un stage de 6 mois à réaliser en tant qu'assistant ingénieur.
-                                     Je souhaite trouver un stage axé sur la programmation. 
-                                     J'ambitionne d'apporter une aide concrète à l'entreprise, de développer mes acquis tout en étant accompagné afin d'acquérir de nouvelles compétences.
-                                </p>
-                            </div>
-                        
-                            <div class="stage right">
-                                <h4>Stage de fin d'études</h4>
-                                <h5>Janvier 2025 - Juin 2025</h5>
-                                <p>
-                                    <!-- Ce stage sera la phase finale de mes 5 années d'études à l'UTBM. Il me permettra de faire la transition entre le monde scolaire et 
-                                    professionnel avec éventuellement une possibilité de prolonger avec un CDI.  -->
-
-                                    Ce stage sera l'aboutissement de 5 années d'études en école d'ingénieurs à l'UTBM. 
-                                    Il me permettra encore une fois de mettre mes compétences au service d'une entreprise et d'une équipe. 
-                                    Cette expérience sera, je l'espère, une passerelle entre le monde universitaire et le monde professionnel.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-
-
-    <section id="competences" data-id="competences" class="competences">
-        <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">Mes compétences</h2>
-              <p>En 3ans, j'ai découvert et appris énormément de choses à travers les cours et mes différents projets personnels. 
+            <h2>A propos</h2>
+            
+            <p>J'ai 21 ans et je poursuis actuellement ma quatrième année d'études en école d'ingénieur au sein de 
+                <a href="https://www.utbm.fr/">l'Université Technologique de Belfort-Montbéliard.</a> 
                 <br>
-                Ce semestre, j'apprends à l'UTBM : <strong>le C++</strong>, la création d'interface graphique avec <strong>Qt Creator</strong>, 
-                le développement Web avec <strong>JavaScript, PHP, Angular</strong>, les bases de données avec <strong>SQL</strong> et d'autres matières plus théorique tels que la recherche opérationnelle et l'algorithmie quantique.    
-              </p>
+                Durant les 2 premières années de tronc commun, j'ai découvert la programmation informatique qui m'a directement passioné. 
+                <br>
+                <!-- Maintenant en branche informatique, je découvre davantage ce vaste monde. 
+                <br> -->
+                Je code régulièrement des projets dans le cadre de mon cursus scolaire, mais également à
+                mes heures perdues par passion et par goût des défis.
+            </p>
+            
+            <h3>Mes aspirations professionnelles</h3>
+                
+            <div class="stage">
+                <h4>Stage de mi-parcours</h4>
+                <p class="stage-date">Septembre 2023 - Février 2024</p>
+
+                <p>
+                    Je réalise mon stage de quatrième année dans l'entreprise Sonceboz SA
+                </p>
+                <!-- <p>
+                    Après une première année d'études en branche informatique, j'ai un stage de 6 mois à réaliser en tant qu'assistant ingénieur.
+                        Je souhaite trouver un stage axé sur la programmation. 
+                        J'ambitionne d'apporter une aide concrète à l'entreprise, de développer mes acquis tout en étant accompagné afin d'acquérir de nouvelles compétences.
+                </p> -->
             </div>
-            <div class="grid">
-                <div class="grid__item left">
-                    <h3>Programmation</h3>
-
-                    
-                    <div class="skills">
-                        <div class="skills-item">
-                            <img src="./img/skills/Python.svg" width="80px"alt="Python">
-                            <span>Python</span>
-                        </div>
-                        <div class="skills-item">
-                            <img src="./img/skills/C.svg" width="80px"alt="C">
-                            <span>C</span>
-                        </div>
-                        
-                        <div class="skills-item">
-                            <img src="./img/skills/C_sharp.svg" width="80px"alt="C#">
-                            <span>C#</span>
-                        </div>
-                        <div class="skills-item">
-                            <img src="./img/skills/Java.svg" width="80px"alt="Java">
-                            <span>Java</span>
-                        </div>
-                        <div class="skills-item">
-                            <img src="./img/skills/Cpp.svg" width="80px"alt="C++">
-                            <span>C++</span>
-                        </div>
-                    </div>
-                    
-                    <!-- <div class="progressbar">
-                        <div class="bar" data-width="80">C</div>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar" data-width="90">Python</div>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar" data-width="85">C#</div>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar" data-width="65">Java</div>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar" data-width="60">C++</div>
-                    </div> -->
-                    <br>
-                    <h3>Développement web</h3>
-                    <div class="skills">
-                        <div class="skills-item">
-                            <img src="./img/skills/Html.svg" width="80px"alt="Html">
-                            <span>Html</span>
-                        </div>
-                        <div class="skills-item">
-                            <img src="./img/skills/Css.svg" width="80px"alt="Css">
-                            <span>CSS</span>
-                        </div>
-                        
-                        <div class="skills-item">
-                            <img src="./img/skills/JavaScript.svg" width="80px"alt="JavaScript">
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skills-item">
-                            <img src="./img/skills/PHP.svg" width="80px"alt="PHP">
-                            <span>PHP</span>
-                        </div>
-                    </div>
-
-
-                    <!-- <div class="progressbar">
-                        <div class="bar" data-width="80">Html</div>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar" data-width="65">Css</div>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar" data-width="55">JavaScript</div>
-                    </div>
-                    <div class="progressbar">
-                        <div class="bar" data-width="70">PHP</div>
-                    </div> -->
-                </div>
-                <div class="grid__item right">
-                    <h3>Mes certifications</h3>
-                    <ul class="certifications list-unstyled">
-                        <li>
-                            <a href="https://courses.nvidia.com/certificates/dfa96da549534c0e8f08d71dd27b33c5/" target="_blank">
-                                
-                                <img src="img/certifications/nvidia.jpg" loading="lazy" width="100" height="100" alt="certification nvidia">
-                                <p>Nvidia : Fundamentals of Accelerated Computing with CUDA Python</p>
-                                
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./certifs/MariusDIGUAT--MATEUS-RE4E Introducti-certificate.pdf" target="_blank">
-                                
-                                <img src="img/certifications/re4e.jpg" loading="lazy" width="100" height="100" alt="certification cisco">
-                                <p>Cisco CCNA 1 : Introduction to Networks</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="./certifs/MariusDIGUAT--MATEUS-RE4f-2022-certificate-1.pdf" target="_blank">
-                                <img src="img/certifications/re4f.jpg" loading="lazy" width="100" height="100" alt="certification cisco">
-                                <p>Cisco CCNA 2 : Switching Routing & Wireless Essentials</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        
+            <div class="stage">
+                <h4>Stage de fin d'études</h4>
+                <p class="stage-date">Janvier 2025 - Juin 2025</p>
+                <p>
+                    <!-- Ce stage sera la phase finale de mes 5 années d'études à l'UTBM. Il me permettra de faire la transition entre le monde scolaire et 
+                    professionnel avec éventuellement une possibilité de prolonger avec un CDI.  -->
+    
+                    Ce stage sera l'aboutissement de 5 années d'études en école d'ingénieurs à l'UTBM. 
+                    Il me permettra encore une fois de mettre mes compétences au service d'une entreprise et d'une équipe. 
+                    Cette expérience sera, je l'espère, une passerelle entre le monde universitaire et le monde professionnel.
+                </p>
             </div>
-        </div>    
 
+        </div>
+
+        
+            <img src="./img/profil/ProfilNaxos2.jpeg" alt="">
+
+       
+        
+       
+        
     </section>
+    
     <section id="portfolio" data-id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-              <h2 class="section-title">Mon portfolio</h2>
-              <p>
-                <!-- Ce qui m'a tout de suite plu dans la programmation, c'est la grandeur des possibilités qui me paraît infinie. Après avoir fait mon tout premier projet 
-                (un Puissance 4 de taille réglable (Puissance N)), je me suis lancé dans une multitude de différents projets me permettant de travailler ma logique,
-                ma créativité et d'apprendre de nouvelles choses. Voici un aperçu de mes meilleurs projets. -->
+        
+        <div class="portfolio-header">
 
-                Ce qui m'a tout de suite plu dans la programmation, c'est l'exploration d'un environnement aux ressources inépuisables. 
-                Après avoir codé mon tout premier projet (un Puissance 4 de taille réglable (Puissance N)), je me suis lancé dans une multitude de défis. 
-                Chaque réalisation me permet de perfectionner ma logique, ma créativité et m'oblige à m'ouvrir aux autres pour m'enrichir de leur savoir-faire. 
-                Voici un aperçu de mes réalisations.
-              </p>
-            </div>
-            <ul class="grid portfolio-filters list-unstyled">
-                <li class="grid__item">
+            <h2>Mes projets</h2>
+        
+            <!-- Ce qui m'a tout de suite plu dans la programmation, c'est la grandeur des possibilités qui me paraît infinie. Après avoir fait mon tout premier projet 
+            (un Puissance 4 de taille réglable (Puissance N)), je me suis lancé dans une multitude de différents projets me permettant de travailler ma logique,
+            ma créativité et d'apprendre de nouvelles choses. Voici un aperçu de mes meilleurs projets. -->
+
+            <!-- Ce qui m'a tout de suite plu dans la programmation, c'est l'exploration d'un environnement aux ressources inépuisables. 
+            Après avoir codé mon tout premier projet (un Puissance 4 de taille réglable (Puissance N)), je me suis lancé dans une multitude de défis. 
+            Chaque réalisation me permet de perfectionner ma logique, ma créativité et m'oblige à m'ouvrir aux autres pour m'enrichir de leur savoir-faire. 
+            Voici un aperçu de mes réalisations. -->
+        
+        </div>
+            
+        
+            
+            <!-- <ul class="grid portfolio-filters list-unstyled">
+                <li class="project">
                     <a href="#" class="active" data-filter="all">Tous les projets</a>
                 </li>
-                <li class="grid__item">
+                <li class="project">
                     <a href="#" data-filter="python">Projets python</a>
                 </li>
-                <li class="grid__item">
+                <li class="project">
                     <a href="#" data-filter="unity">Projets unity</a>
                 </li>
-                <li class="grid__item">
+                <li class="project">
                     <a href="#" data-filter="c-java">Projets C/Java</a>
                 </li>
-            </ul>
+            </ul> -->
 
             <!-- Projets  -->
             
-            <div class="grid">
+            <div class="projects-container">
 
                 <!-- Eventum -->
 
-                <div class="grid__item">
+                
                     <div class="card" data-category="web">
-                        <img src="img/projets/eventum/eventum.png" loading="lazy" width="365" height="243" 
+                        <img src="img/projets/eventum/eventum.png" loading="lazy"
                          alt="Eventum" class="card__image">
                         <div class="card__inner">
                             <h3 class="card__title">Eventum</h3>
@@ -305,7 +195,7 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/eventum/accueil.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/eventum/accueil-connected.png" loading="lazy" width="560" height="373"
@@ -316,7 +206,7 @@
                                         class="card__image" alt="">
                                         
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Eventum</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -382,11 +272,11 @@
                         </div>
                     
                     </div>
-                </div>      
+                  
 
                 <!-- Escape World -->
 
-                <div class="grid__item">
+                
                     <div class="card" data-category="unity">
                         <img src="img/projets/escape_world/escape1.png" loading="lazy" width="365" height="243" 
                          alt="Snake" class="card__image">
@@ -404,7 +294,7 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/escape_world/escape2.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/escape_world/escape4.png" loading="lazy" width="560" height="373"
@@ -414,7 +304,7 @@
                                         <img src="img/projets/escape_world/escape8.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Escape World</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -487,11 +377,11 @@
                         </div>
                     
                     </div>
-                </div>                
+                               
 
                 <!-- Chess Game -->
 
-                <div class="grid__item">
+                
                     <div class="card" data-category="web">
                         <img src="img/projets/echec/echec1.png" loading="lazy" width="365" height="243" 
                          alt="Echecs" class="card__image">
@@ -509,7 +399,7 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/echec/echec1.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/echec/echec2.png" loading="lazy" width="560" height="373"
@@ -522,7 +412,7 @@
                                         class="card__image" alt=""> -->
                                         
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Jeu d'échecs</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -579,11 +469,11 @@
                         </div>
                     
                     </div>
-                </div>      
+                     
 
                 <!-- Puissance 4 -->
                 
-                <div class="grid__item">
+                
                     <div class="card" data-category="python">
                         <img src="img/projets/puissance_4/Puissance4_1.png" loading="lazy" width="365" height="243" 
                         alt="Puissance 4" class="card__image">
@@ -601,7 +491,7 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/puissance_4/PuissanceN_3.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="Puissance N">
                                         <img src="img/projets/puissance_4/Puissance4_2.png" loading="lazy" width="560" height="373"
@@ -610,7 +500,7 @@
                                         class="card__image" alt="Teeko">
                                         
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Puissance 4</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -686,11 +576,11 @@
                         </div>
 
                     </div>
-                </div>
+                
 
                 <!-- Squary -->
 
-                <div class="grid__item">
+                
                     <div class="card" data-category="unity">
                         <img src="img/projets/squary/squary4.png" loading="lazy" width="365" height="243" 
                             alt="Squarry" class="card__image">
@@ -708,7 +598,7 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/squary/squary1.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/squary/squary3.png" loading="lazy" width="560" height="373"
@@ -720,7 +610,7 @@
                                         <img src="img/projets/squary/squary6.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
 
                                         <img src="img/projets/squary/game_jam.jpg" loading="lazy" width="500" height="500"
                                         class="card__image" alt="">
@@ -786,11 +676,11 @@
                     
                     
                     </div>
-                </div>
+                
 
                 <!-- Labyrinthe -->
 
-                <div class="grid__item">
+                
                     <div class="card" data-category="python">
                         <img src="img/projets/labyrinthe/lab_7.png" loading="lazy" width="365" height="243" 
                         alt="Labyrinthe" class="card__image">
@@ -808,7 +698,7 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <!-- <img src="img/projets/labyrinthe/lab_4.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="géneration labyrinthe img">
                                         <img src="img/projets/labyrinthe/lab_8.png" loading="lazy" width="560" height="373"
@@ -824,7 +714,7 @@
                                         class="card__image" alt="résolution labyrinthe img">
                                     
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Génération et résolution de Labyrinthe</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -901,10 +791,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
 
                 <!-- Ballz -->
-                <div class="grid__item">
+                
                     <div class="card" data-category="unity">
                         <img src="img/projets/ballz_game/ballz_5.png" loading="lazy" width="365" height="243" 
                          alt="Ballz game" class="card__image">
@@ -922,7 +812,7 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/ballz_game/ballz_1.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/ballz_game/ballz_2.png" loading="lazy" width="560" height="373"
@@ -932,7 +822,7 @@
                                         <img src="img/projets/ballz_game/ballz_7.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Ballz Game</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -991,11 +881,11 @@
                     
                     
                     </div>
-                </div>
+                
 
                 <!-- IQ Puzzler -->
 
-                <div class="grid__item">
+                
                     <div class="card" data-category="python">
                         <img src="img/projets/iq_puzzler/IQ_puzzler_2.png" loading="lazy" width="365" height="243" 
                         alt="IQ puzzler" class="card__image">
@@ -1013,13 +903,13 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/iq_puzzler/IQ_puzzler_1.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/iq_puzzler/IQ_puzzler_2.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">IQ Puzzler Pro</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -1077,11 +967,11 @@
                         </div>
                     
                     </div>
-                </div>
+                
 
                 <!-- Multi-Jeux -->
 
-                <div class="grid__item">
+                
                     <div class="card" data-category="unity">
                         <img src="img/projets/lp2b_mini_jeux/lp2b_1.png" loading="lazy" width="365" height="243" 
                          alt="Menu multi jeux" class="card__image">
@@ -1099,7 +989,7 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/lp2b_mini_jeux/lp2b_1.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/lp2b_mini_jeux/lp2b_3.png" loading="lazy" width="560" height="373"
@@ -1111,7 +1001,7 @@
                                         <img src="img/projets/lp2b_mini_jeux/lp2b_7.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Menu Multi Jeux</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -1167,11 +1057,11 @@
                     
                     
                     </div>
-                </div>
+                
 
                 <!-- Sudoku -->
                 
-                <div class="grid__item">
+                
                     <div class="card" data-category="python">
                         <img src="img/projets/sudoku/Sudoku3.png" loading="lazy" width="365" height="243" 
                          alt="Sudoku" class="card__image">
@@ -1190,14 +1080,14 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/sudoku/Sudoku1.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/sudoku/Sudoku3.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
 
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Sudoku</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -1258,11 +1148,11 @@
                     
                     
                     </div>
-                </div>
+                
 
                 <!-- Tetris -->
 
-                <div class="grid__item">
+                
                     <div class="card" data-category="c-java">
                         <img src="img/projets/tetris/tetris_2.png" loading="lazy" width="365" height="243" 
                          alt="Tetris" class="card__image">
@@ -1280,13 +1170,13 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/tetris/tetris_1.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/tetris/tetris_2.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Tetris</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -1343,11 +1233,11 @@
                     
                     
                     </div>
-                </div>
+                
 
                 <!-- Jeu de la Vie -->
 
-                <div class="grid__item">
+                
                     <div class="card" data-category="c-java">
                         <img src="img/projets/jeu_de_la_vie/jdv2.png" loading="lazy" width="365" height="243" 
                          alt="Jeu de la vie" class="card__image">
@@ -1365,7 +1255,7 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/jeu_de_la_vie/jdv1.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/jeu_de_la_vie/jdv2.png" loading="lazy" width="560" height="373"
@@ -1373,7 +1263,7 @@
                                         <img src="img/projets/jeu_de_la_vie/jdv3.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Jeu de la Vie</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -1439,11 +1329,11 @@
                         </div>
                     
                     </div>
-                </div>
+                
 
                 <!-- Snake -->
 
-                <!-- <div class="grid__item">
+                <!-- <div class="project">
                     <div class="card" data-category="python">
                         <img src="img/projets/snake/Snake1.png" loading="lazy" width="365" height="243" 
                          alt="Snake" class="card__image">
@@ -1461,13 +1351,13 @@
                         <div class="modal__content">
                             <div class="container">
                                 <div class="grid">
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <img src="img/projets/snake/Snake1.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                         <img src="img/projets/snake/Snake2.png" loading="lazy" width="560" height="373"
                                         class="card__image" alt="">
                                     </div>
-                                    <div class="grid__item">
+                                    <div class="project">
                                         <h4 class="modal__title h2">Snake</h4>
                                         <p>
                                             <svg width="15" height="15" aria-hidden="true" focusable="false" data-prefix="far"
@@ -1527,10 +1417,142 @@
 
 
             </div>
-        </div>
+        
     </section>
 
-    <section id="experiences" data-id="experiences" class="experiences">
+    <section id="competences" data-id="competences" class="competences">
+
+        <div class="competences-header">
+            <h2>Mes compétences</h2>
+
+            <!-- <div class="section-header">
+              <p>En 3ans, j'ai découvert et appris énormément de choses à travers les cours et mes différents projets personnels. 
+                <br>
+                Ce semestre, j'apprends à l'UTBM : <strong>le C++</strong>, la création d'interface graphique avec <strong>Qt Creator</strong>, 
+                le développement Web avec <strong>JavaScript, PHP, Angular</strong>, les bases de données avec <strong>SQL</strong> et d'autres matières plus théorique tels que la recherche opérationnelle et l'algorithmie quantique.    
+              </p>
+            </div> -->
+        </div>
+
+        <div class="competences-container">
+
+            <h3>Programmation</h3>
+                    
+            <div class="skills">
+                <div class="skills-item">
+                    <img src="./img/skills/Python.svg" width="80px"alt="Python">
+                    <span>Python</span>
+                </div>
+                <div class="skills-item">
+                    <img src="./img/skills/C.svg" width="80px"alt="C">
+                    <span>C</span>
+                </div>
+                
+                <div class="skills-item">
+                    <img src="./img/skills/C_sharp.svg" width="80px"alt="C#">
+                    <span>C#</span>
+                </div>
+                <div class="skills-item">
+                    <img src="./img/skills/Java.svg" width="80px"alt="Java">
+                    <span>Java</span>
+                </div>
+                <div class="skills-item">
+                    <img src="./img/skills/Cpp.svg" width="80px"alt="C++">
+                    <span>C++</span>
+                </div>
+            </div>
+
+            <h3>Développement web</h3>
+
+            <div class="skills">
+                <div class="skills-item">
+                    <img src="./img/skills/Html.svg" width="80px"alt="Html">
+                    <span>Html</span>
+                </div>
+                <div class="skills-item">
+                    <img src="./img/skills/Css.svg" width="80px"alt="Css">
+                    <span>CSS</span>
+                </div>
+
+                <div class="skills-item">
+                    <img src="./img/skills/TypeScript.svg" width="70px"alt="JavaScript">
+                    <span>TypeScript</span>
+                </div>
+                
+                <div class="skills-item">
+                    <img src="./img/skills/JavaScript.svg" width="70px"alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="skills-item">
+                    <img src="./img/skills/PHP.svg" width="80px"alt="PHP">
+                    <span>PHP</span>
+                </div>
+                <div class="skills-item">
+                    <img src="./img/skills/Angular.svg" width="80px"alt="JavaScript">
+                    <span>Angular</span>
+                </div>
+                <div class="skills-item">
+                    <img src="./img/skills/Sql.svg" width="80px"alt="JavaScript">
+                    <span>SQL</span>
+                </div>
+            </div>
+
+            <h3>Outils</h3>
+                    
+            <div class="skills">
+                <div class="skills-item">
+                    <img src="./img/skills/Github.svg" width="80px"alt="Python">
+                    <span>Github</span>
+                </div>
+                <div class="skills-item">
+                    <img src="./img/skills/Unity.svg" width="80px"alt="C">
+                    <span>Unity</span>
+                </div>
+                
+                <div class="skills-item">
+                    <img src="./img/skills/Qt.svg" width="80px"alt="C#">
+                    <span>Qt Creator</span>
+                </div>
+                <div class="skills-item">
+                    <img src="./img/skills/JavaFX.svg" width="80px"alt="Java">
+                    <span>JavaFX</span>
+                </div>
+                
+            </div>
+            
+            
+            <h3>Mes certifications</h3>
+
+            <div class="certifications">
+                
+                <a href="https://courses.nvidia.com/certificates/dfa96da549534c0e8f08d71dd27b33c5/" target="_blank" class="certif">
+                    
+                    <img src="img/certifications/nvidia.jpg" loading="lazy" width="100" height="100" alt="certification nvidia">
+                    <p>Nvidia : Fundamentals of Accelerated Computing with CUDA Python</p>
+                    
+                </a>
+            
+            
+                <a href="./certifs/MariusDIGUAT--MATEUS-RE4E Introducti-certificate.pdf" target="_blank" class="certif">
+                    
+                    <img src="img/certifications/re4e.jpg" loading="lazy" width="100" height="100" alt="certification cisco">
+                    <p>Cisco CCNA 1 : Introduction to Networks</p>
+                </a>
+            
+            
+                <a href="./certifs/MariusDIGUAT--MATEUS-RE4f-2022-certificate-1.pdf" target="_blank" class="certif">
+                    <img src="img/certifications/re4f.jpg" loading="lazy" width="100" height="100" alt="certification cisco">
+                    <p>Cisco CCNA 2 : Switching Routing & Wireless Essentials</p>
+                </a>
+            
+            </div>
+             
+            
+        </div>    
+
+    </section>
+
+    <!-- <section id="experiences" data-id="experiences" class="experiences">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Mon expérience professionnelle</h2>
@@ -1540,10 +1562,8 @@
                 </p>
             </div>
             <div class="grid">
-                <!-- <div class="grid__item left">
-                    <img src="./img/profil/ProfilMoulin.jpg" alt="">
-                </div> -->
-                <div class="grid__item right">
+                
+                <div class="project right">
                     
                     <h4>Depuis septembre 2022 :</h4>
                     <p>
@@ -1574,7 +1594,7 @@
             </div>
 
         </div>
-    </section>
+    </section> -->
 
     <!-- <section id="loisirs" data-id="loisirs" class="loisirs">
         <div class="container">
@@ -1590,10 +1610,10 @@
                 <h3> Le cirque </h3>
 
                 <div class="grid">
-                    <div class="grid__item left">
+                    <div class="project left">
                         
                     </div>
-                    <div class="grid__item right">
+                    <div class="project right">
                         
                         
                     </div>
@@ -1603,60 +1623,49 @@
     </section> -->
 
     <section id="contact" data-id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Contact</h2>
-                <p>Si vous êtes intérressé par mon profil, n'hésitez pas à m'envoyer un message</p>
+
+        
+        
+            <div class="contact-header">
+                <h2 class="section-title">Me contacter</h2>
+                <!-- <p>Si vous êtes intérressé par mon profil, n'hésitez pas à m'envoyer un message</p> -->
             </div>
-            <form action="https://formsubmit.co/marius.diguat--mateus@utbm.fr" method="POST" class="form">
 
-                <input type="hidden" name="_captcha" value="false">
-                <input type="text" name="_honey" style="display:none">
-                <input type="hidden" name="_next" value="https://skatezen.github.io/First_Portfolio/thanks.html">
+            <div class="contact-content">
+                <div class="contact-container">
+                    <a href="mailto:marius.diguat--mateus@utbm.fr" class="contact-link">
+                        <img src="./img/contact/mail.svg" width="80px"alt="Python">
+                        <!-- <p>marius.diguat--ma@utbm.fr</p> -->
+                    </a>
+                    <a href="https://www.linkedin.com/in/marius-diguat-mateus-1375231bb/" target="_blank" class="contact-link">
+                        <img src="./img/contact/Linkedin.svg" width="80px"alt="Python">
+                    </a>
+                    <a href="https://github.com/SkateZen" target="_blank" class="contact-link">
+                        <img src="./img/contact/Github.svg" width="80px"alt="Python">
+                    </a>
+                </div>
+            </div>
+            
 
-
-                <label for="firstname">
-                    <input type="text" name="firstname" id="firstname" placeholder="Nom" required>
-                </label>
-                <label for="lastname">
-                    <input type="text" name="lastname" id="lastname" placeholder="Prénom">
-                </label>
-                <label for="email">
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                </label>
-                <label for="firstname">
-                    <textarea name="message" id="message" placeholder="Message"></textarea>
-                </label>
-                <input type="submit" class="btn" value="Envoyer">
-            </form>
-        </div>
+            <div class="bottom">
+                
+                
+            </div>
+            
+        
     </section>
 
     <footer>
-        <div class="container">
-            <div class="grid">
-                <div class="grid__item">
-                    <p>Diguat--Mateus Marius</p>
-                </div>
-                <div class="grid__item">
-                    <ul class="socials list-unstyled">
-                        <li><a href="https://www.linkedin.com/in/marius-diguat-mateus-1375231bb" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px">    <path d="M 8 3.0097656 C 4.53 3.0097656 2.0097656 5.0892187 2.0097656 7.9492188 C 2.0097656 10.819219 4.59 12.990234 8 12.990234 C 11.47 12.990234 13.990234 10.870625 13.990234 7.890625 C 13.830234 5.020625 11.36 3.0097656 8 3.0097656 z M 3 15 C 2.45 15 2 15.45 2 16 L 2 45 C 2 45.55 2.45 46 3 46 L 13 46 C 13.55 46 14 45.55 14 45 L 14 16 C 14 15.45 13.55 15 13 15 L 3 15 z M 18 15 C 17.45 15 17 15.45 17 16 L 17 45 C 17 45.55 17.45 46 18 46 L 27 46 C 27.552 46 28 45.552 28 45 L 28 30 L 28 29.75 L 28 29.5 C 28 27.13 29.820625 25.199531 32.140625 25.019531 C 32.260625 24.999531 32.38 25 32.5 25 C 32.62 25 32.739375 24.999531 32.859375 25.019531 C 35.179375 25.199531 37 27.13 37 29.5 L 37 45 C 37 45.552 37.448 46 38 46 L 47 46 C 47.55 46 48 45.55 48 45 L 48 28 C 48 21.53 44.529063 15 36.789062 15 C 33.269062 15 30.61 16.360234 29 17.490234 L 29 16 C 29 15.45 28.55 15 28 15 L 18 15 z"/></svg> -->
-                            <!-- <svg class="icon linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.<path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg> -->
-                        </i></a></li>
-    
-                        <li><a href="https://github.com/SkateZen" target="_blank">
-                            <svg class="icon github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-                        </i></a></li>
-                    </ul>
-                </div>
-                <div class="grid__item">
-                    <p>Copyright © 2022 Marius Portfolio. All Rights Reserved.</p>
-                </div>
-            </div>
-        </div>
+        
+        <p>Merci d'avoir parcouru mon portfolio jusqu'au bout, 
+           <br> je l'ai réalisé en Html, Css et Typescript.</p>
+        
+        <p>Copyright © 2023 Marius Diguat--Mateus. All Rights Reserved.</p>
+        
+       
     </footer>
+
+    
     
 </body>
 </html>

@@ -48,6 +48,7 @@
     /* background-color: var(--transparent-black); */
 
     /* width: 600px; */
+    max-width: 60%;
     
 }
 
@@ -79,3 +80,10 @@
     /* text-transform: uppercase; */
 }
 
+@media screen and (max-width:900px) {
+
+    .content{
+        margin-top: 150px;
+        margin-left: 50px;
+    }
+}

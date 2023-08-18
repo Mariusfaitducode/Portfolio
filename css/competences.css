@@ -36,7 +36,7 @@
 
 
 
-.competences .skills{
+.skills, .certifications{
     display : flex;
 
     justify-content: center;
@@ -89,6 +89,36 @@
 
     width: 220px;
     height: 100px;
+}
+
+
+@media screen and (max-width:900px) {
+
+    .competences .skills{
+        width: 90%;
+        flex-wrap: wrap;
+    }
+
+    .competences .certifications{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 400px;
+        padding-top: 20px;
+    }
+
+    .competences .certif{
+        display: flex;
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .competences .certif p{
+
+        width: 220px;
+        height: 100px;
+    }
 }
 
 

@@ -59,6 +59,34 @@
     height: 200px; */
     /* background-image: linear-gradient(to right, var(--light-blue) 0%, rgba(0, 0, 0, 0) 5%), 
                         url('../img/profil/ProfilNaxos2.jpeg');*/
+}
 
+@media screen and (max-width:900px) {
 
+    .apropos{
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .apropos-text{
+
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-top: 100px;
+        padding-bottom: 60px;
+    
+        width: 80%;
+    }
+
+    .apropos img{
+        width: 100%;
+
+        max-width: none;
+        max-height: 600px;
+        
+        
+        object-fit: cover;
+    }
 }

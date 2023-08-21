@@ -43,6 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
         lastScrollPosition = currentScrollPosition;
     }
     
+    const links = document.querySelectorAll('.menu a');
+
+
+    links.forEach(link =>{
+        link.addEventListener('click', () => closeMenu());
+    })
 
   });
   

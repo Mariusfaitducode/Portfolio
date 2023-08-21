@@ -6,6 +6,7 @@
 
 :root{
 
+    --light-gray: #666;
     --gray: #333;
 
     --white: #ffffff;
@@ -20,6 +21,8 @@
     --dark-blue-2: #13172A;
 
     --blue: #7FDEFF;
+    --blue-2: #00A6FB;
+    --blue-3: #0D21A1;
 
     --light-blue: #f6f7ff;
 

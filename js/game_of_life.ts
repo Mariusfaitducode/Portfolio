@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cell.classList.add('cell');
 
                 cell.addEventListener('mouseover', () => toggleCellState(row, col, cell));
+                cell.addEventListener('touchstart', () => toggleCellState(row, col, cell));
 
                 gameContainer.appendChild(cell);
                 

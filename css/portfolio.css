@@ -247,7 +247,7 @@
     opacity: 0;
 
     margin-top: 15px;
-    margin-right: 15px;
+    margin-right: 20px;
     /* background-color: var(--blue); */
     display: flex;
     justify-content: center;
@@ -264,12 +264,14 @@
 }
 
 .card-link svg{
-    width: 50%;
-    height: 50%;
+    
     fill: var(--light-blue);
     transition: all .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-}
+}                                                                                                   
 
 .card-link:hover{
     /* background-color: var(--light-gray); */

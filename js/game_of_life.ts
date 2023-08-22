@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Actualise taille des cellules
     window.addEventListener('resize', adjustCellSize);
 
-    setInterval(updateCellStyles, 1000);
+    let interval = setInterval(updateCellStyles, 1000);
 
 
     // Fonctions
@@ -58,12 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         adjustCellSize();
     }
-
-
-    
-
-
-    
 
     function toggleCellState(row: number, col: number, cell: HTMLElement) {
         grid[row][col] = !grid[row][col];
@@ -158,6 +152,55 @@ document.addEventListener('DOMContentLoaded', () => {
             cell.style.height = `${cellSize}px`;
         });
     }
+
+
+    // Controller
+
+    let speed : number = 0;
+
+    const infos = document.querySelector('.info') as HTMLElement;
+
+    const playBtn = document.querySelector('.play') as HTMLElement;
+    const stopBtn = document.querySelector('.stop') as HTMLElement;
+
+    let running : Boolean = true;
+
+    stopBtn.addEventListener('click', () => {
+        stopBtn.classList.add('hide');
+        playBtn.classList.remove('hide');
+
+        console.log('stop');
+        clearInterval(interval);
+        running = false;
+    });
+
+    playBtn.addEventListener('click', () => {
+        stopBtn.classList.remove('hide');
+        playBtn.classList.add('hide');
+
+        console.log('play');
+        interval = setInterval(updateCellStyles, 1000 * 1/speed);
+        running = true;
+    });
+
+
+    const speedSlider = document.getElementById('speedSlider') as HTMLElement;
+    const sliderValue = document.getElementById('sliderValue') as HTMLElement;
+
+    speedSlider.addEventListener('input', (event) => {
+        const value = (event.target as HTMLInputElement).value;
+        sliderValue.textContent = value + 'x';
+
+        speed = +value;
+
+        console.log(speed);
+        if (running == true){
+            clearInterval(interval);
+            interval = setInterval(updateCellStyles, (1000 * 1/speed));
+        }
+        
+    });
+
     
   });
   

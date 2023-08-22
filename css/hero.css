@@ -39,7 +39,7 @@
     background-color: var(--dark-blue-2);
 }
 
-.content{
+.hero-content{
     position: absolute;
 
     margin-top: 200px;
@@ -87,3 +87,76 @@
         margin-left: 50px;
     }
 }
+
+
+.controller{
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+
+    width: 300px;
+    height: 60px;
+
+    border: 3px solid var(--blue);
+    border-radius: 30px;
+
+    /* background-color: var(--white); */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pause svg{
+    margin-left: 20px;
+    width: 30px;
+    height: 30px;
+    fill: var(--blue);
+    cursor: pointer;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    margin: 20px;
+    
+  }
+  
+  .slider {
+    width: 100%;
+  }
+  
+  #sliderValue {
+    margin-left: 10px;
+    color: var(--blue);
+  }
+
+  .info{
+    
+    height: 56px;
+    min-width: 54px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--blue);
+    font-size: 3rem;
+    font-weight: 700;
+    /* margin-right: 30px; */
+    border-left: 3px solid var(--blue);
+    border-top: 3px solid var(--blue);
+    border-bottom: 3px solid var(--blue);
+
+    border-radius: 50%;
+  }
+
+  .info:hover{
+
+    /* color: var(--blue-3); */
+    
+    border: 5px solid var(--blue);
+
+  }
+

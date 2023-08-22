@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeGrid();
     // Actualise taille des cellules
     window.addEventListener('resize', adjustCellSize);
-    setInterval(updateCellStyles, 1000);
+    var interval = setInterval(updateCellStyles, 1000);
     // Fonctions
     function createEmptyGrid(rows, columns) {
         var grid = [];
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 var cell = document.createElement('div');
                 cell.classList.add('cell');
                 cell.addEventListener('mouseover', function () { return toggleCellState(row, col, cell); });
+                cell.addEventListener('touchstart', function () { return toggleCellState(row, col, cell); });
                 gameContainer.appendChild(cell);
             };
             for (var col = 0; col < numColumns; col++) {
@@ -102,4 +103,36 @@ document.addEventListener('DOMContentLoaded', function () {
             cell.style.height = "".concat(cellSize, "px");
         });
     }
+    // Controller
+    var speed = 0;
+    var infos = document.querySelector('.info');
+    var playBtn = document.querySelector('.play');
+    var stopBtn = document.querySelector('.stop');
+    var running = true;
+    stopBtn.addEventListener('click', function () {
+        stopBtn.classList.add('hide');
+        playBtn.classList.remove('hide');
+        console.log('stop');
+        clearInterval(interval);
+        running = false;
+    });
+    playBtn.addEventListener('click', function () {
+        stopBtn.classList.remove('hide');
+        playBtn.classList.add('hide');
+        console.log('play');
+        interval = setInterval(updateCellStyles, 1000 * 1 / speed);
+        running = true;
+    });
+    var speedSlider = document.getElementById('speedSlider');
+    var sliderValue = document.getElementById('sliderValue');
+    speedSlider.addEventListener('input', function (event) {
+        var value = event.target.value;
+        sliderValue.textContent = value + 'x';
+        speed = +value;
+        console.log(speed);
+        if (running == true) {
+            clearInterval(interval);
+            interval = setInterval(updateCellStyles, (1000 * 1 / speed));
+        }
+    });
 });

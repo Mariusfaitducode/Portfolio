@@ -132,10 +132,14 @@
     color: var(--blue);
   }
 
-  .info{
+  .info-button{
+
+    transition: all 0.3s ease-in-out;
     
     height: 56px;
     min-width: 54px;
+
+    cursor: pointer;
 
     display: flex;
     justify-content: center;
@@ -152,11 +156,56 @@
     border-radius: 50%;
   }
 
-  .info:hover{
+  .info-button:hover{
 
     /* color: var(--blue-3); */
     
     border: 5px solid var(--blue);
 
+  }
+
+  .information{
+    position: absolute;
+    bottom: 160px;
+    right: 60px;
+
+    width: 360px;
+    /* height: 360px; */
+
+    color: var(--white);
+
+    background-color: var(--transparent-black);
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .information:hover{
+    background-color: var(--transparent-black-2);
+  }
+
+  .exit-information{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+
+    width: 40px;
+    height: 40px;
+
+    cursor: pointer;
+
+    fill: var(--white);
+
+    background-color: var(--dark-blue);
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .exit-information svg{
+    width: 35px;
+    height: 35px;
   }
 

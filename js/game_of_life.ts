@@ -201,6 +201,17 @@ document.addEventListener('DOMContentLoaded', () => {
         
     });
 
-    
+
+    const infoButton = document.querySelector('.info-button') as HTMLElement;
+    const information = document.querySelector('.information') as HTMLElement;
+    const exitInfo = document.querySelector('.exit-information') as HTMLElement;
+
+    infoButton.addEventListener('click', () => {
+        information.classList.remove('hide');
+    });
+
+    exitInfo.addEventListener('click', () => {
+        information.classList.add('hide');
+    });
   });
   

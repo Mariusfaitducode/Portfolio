@@ -135,4 +135,13 @@ document.addEventListener('DOMContentLoaded', function () {
             interval = setInterval(updateCellStyles, (1000 * 1 / speed));
         }
     });
+    var infoButton = document.querySelector('.info-button');
+    var information = document.querySelector('.information');
+    var exitInfo = document.querySelector('.exit-information');
+    infoButton.addEventListener('click', function () {
+        information.classList.remove('hide');
+    });
+    exitInfo.addEventListener('click', function () {
+        information.classList.add('hide');
+    });
 });

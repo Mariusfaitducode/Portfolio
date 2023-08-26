@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             var _loop_2 = function (col) {
                 var cell = document.createElement('div');
                 cell.classList.add('cell');
-                //cell.addEventListener('mouseover', () => toggleCellState(row, col, cell));
+                cell.addEventListener('mouseover', function () { return toggleCellState(row, col, cell); });
                 cell.addEventListener('touchstart', function () { return toggleCellState(row, col, cell); });
                 gameContainer.appendChild(cell);
             };
@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //updateCellStyles();
     }
     function updateCellStyles() {
+        //console.log('update');
         var cells = gameContainer.querySelectorAll('.cell');
         cells.forEach(function (cell, index) {
             var row = Math.floor(index / numColumns);
@@ -150,42 +151,52 @@ document.addEventListener('DOMContentLoaded', function () {
         [1, -1],
         [-1, 0],
         [0, 1]];
-    function rotatePlaneur() {
-        var newPlaneur = planeur;
-        for (var _i = 0, planeur_1 = planeur; _i < planeur_1.length; _i++) {
-            var coord = planeur_1[_i];
-            var x = coord[0];
-            var y = coord[1];
-            var newX = -y;
-            var newY = x;
-            newPlaneur.push([newX, newY]);
-        }
-        return newPlaneur;
-    }
+    var planeur2 = [[-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, 1],
+        [1, 0]];
+    var planeur3 = [[0, -1],
+        [1, -1],
+        [-1, 0],
+        [1, 0],
+        [1, 1]];
     function generatePlaneur1() {
         if (window.innerWidth <= 600) {
-            for (var _i = 0, planeur_2 = planeur; _i < planeur_2.length; _i++) {
-                var coord = planeur_2[_i];
+            for (var _i = 0, planeur_1 = planeur; _i < planeur_1.length; _i++) {
+                var coord = planeur_1[_i];
                 console.log(coord);
                 var x = coord[0] + 15;
-                var y = coord[1] + 25;
+                var y = coord[1] + 15;
                 grid[x][y] = true;
             }
         }
     }
     function generatePlaneur2() {
         if (window.innerWidth <= 600) {
-            for (var _i = 0, _a = rotatePlaneur(); _i < _a.length; _i++) {
-                var coord = _a[_i];
-                console.log(coord);
-                var x = coord[0] + 0;
-                var y = coord[1] + 25;
+            for (var _i = 0, planeur2_1 = planeur2; _i < planeur2_1.length; _i++) {
+                var coord = planeur2_1[_i];
+                //console.log(coord);
+                var x = coord[0] + 28;
+                var y = coord[1] + 3;
                 grid[x][y] = true;
             }
         }
     }
-    console.log("help");
-    console.log(rotatePlaneur());
+    function generatePlaneur3() {
+        if (window.innerWidth <= 600) {
+            for (var _i = 0, planeur3_1 = planeur3; _i < planeur3_1.length; _i++) {
+                var coord = planeur3_1[_i];
+                //console.log(coord);
+                var x = coord[0] + 3;
+                var y = coord[1] + 15;
+                grid[x][y] = true;
+            }
+        }
+    }
+    //console.log("help");
+    //console.log(rotatePlaneur());
     setTimeout(generatePlaneur1, 1000);
-    //setInterval(generatePlaneur2, 5000);
+    setInterval(generatePlaneur2, 20000);
+    setInterval(generatePlaneur3, 30000);
 });

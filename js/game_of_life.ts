@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const cell = document.createElement('div');
                 cell.classList.add('cell');
 
-                //cell.addEventListener('mouseover', () => toggleCellState(row, col, cell));
+                cell.addEventListener('mouseover', () => toggleCellState(row, col, cell));
                 cell.addEventListener('touchstart', () => toggleCellState(row, col, cell));
 
                 gameContainer.appendChild(cell);
@@ -71,6 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function updateCellStyles() {
+
+        //console.log('update');
 
         const cells = gameContainer.querySelectorAll('.cell');
 
@@ -222,23 +224,17 @@ document.addEventListener('DOMContentLoaded', () => {
                    [-1, 0],
                    [0, 1]];  
 
+    let planeur2 = [[-1, -1],
+                    [-1, 0],
+                    [-1, 1],
+                    [0, 1],
+                    [1, 0]];
 
-    function rotatePlaneur(){
-
-        let newPlaneur = planeur;
-
-        for (let coord of planeur){
-
-            let x = coord[0];
-            let y = coord[1];
-
-            let newX = -y;
-            let newY = x;
-
-            newPlaneur.push([newX, newY]);
-        }
-        return newPlaneur;
-    }
+    let planeur3 = [[0, -1],
+                    [1, -1],
+                    [-1, 0],
+                    [1, 0],
+                    [1, 1]];
 
     function generatePlaneur1(){
 
@@ -249,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log(coord);
 
                 let x = coord[0] + 15;
-                let y = coord[1] + 25;
+                let y = coord[1] + 15;
                 grid[x][y] = true;
             }
         }
@@ -259,23 +255,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (window.innerWidth <= 600){
 
-            for (let coord of rotatePlaneur()){
+            for (let coord of planeur2){
 
-                console.log(coord);
+                //console.log(coord);
 
-                let x = coord[0] + 0;
-                let y = coord[1] + 25;
+                let x = coord[0] + 28;
+                let y = coord[1] + 3;
                 grid[x][y] = true;
             }
         }
     }
 
-    console.log("help");
-    console.log(rotatePlaneur());
+    function generatePlaneur3(){
+
+        if (window.innerWidth <= 600){
+
+            for (let coord of planeur3){
+
+                //console.log(coord);
+
+                let x = coord[0] + 3;
+                let y = coord[1] + 15;
+                grid[x][y] = true;
+            }
+        }
+    }
+
+    //console.log("help");
+    //console.log(rotatePlaneur());
 
     setTimeout(generatePlaneur1, 1000);
 
-    //setInterval(generatePlaneur2, 5000);
+    setInterval(generatePlaneur2, 20000);
+
+    setInterval(generatePlaneur3, 30000);
                 
                 
 });

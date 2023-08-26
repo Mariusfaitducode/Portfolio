@@ -49,6 +49,7 @@
     /* width: 600px; */
     max-width: 70%;
     
+    
 }
 
 .hero-content span{
@@ -104,6 +105,7 @@
     .hero-content{
         margin-top: 150px;
         margin-left: 50px;
+        max-height: 400px;
     }
 }
 

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
     initializeGrid();
     // Actualise taille des cellules
     window.addEventListener('resize', adjustCellSize);
-    setInterval(updateCellStyles, 1000);
+    var interval = setInterval(updateCellStyles, 1000);
     // Fonctions
     function createEmptyGrid(rows, columns) {
         var grid = [];
@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 var cell = document.createElement('div');
                 cell.classList.add('cell');
                 cell.addEventListener('mouseover', function () { return toggleCellState(row, col, cell); });
+                cell.addEventListener('touchstart', function () { return toggleCellState(row, col, cell); });
                 gameContainer.appendChild(cell);
             };
             for (var col = 0; col < numColumns; col++) {
@@ -49,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //updateCellStyles();
     }
     function updateCellStyles() {
+        //console.log('update');
         var cells = gameContainer.querySelectorAll('.cell');
         cells.forEach(function (cell, index) {
             var row = Math.floor(index / numColumns);
@@ -102,4 +104,99 @@ document.addEventListener('DOMContentLoaded', function () {
             cell.style.height = "".concat(cellSize, "px");
         });
     }
+    // Controller
+    var speed = 0;
+    var infos = document.querySelector('.info');
+    var playBtn = document.querySelector('.play');
+    var stopBtn = document.querySelector('.stop');
+    var running = true;
+    stopBtn.addEventListener('click', function () {
+        stopBtn.classList.add('hide');
+        playBtn.classList.remove('hide');
+        console.log('stop');
+        clearInterval(interval);
+        running = false;
+    });
+    playBtn.addEventListener('click', function () {
+        stopBtn.classList.remove('hide');
+        playBtn.classList.add('hide');
+        console.log('play');
+        interval = setInterval(updateCellStyles, 1000 * 1 / speed);
+        running = true;
+    });
+    var speedSlider = document.getElementById('speedSlider');
+    var sliderValue = document.getElementById('sliderValue');
+    speedSlider.addEventListener('input', function (event) {
+        var value = event.target.value;
+        sliderValue.textContent = value + 'x';
+        speed = +value;
+        console.log(speed);
+        if (running == true) {
+            clearInterval(interval);
+            interval = setInterval(updateCellStyles, (1000 * 1 / speed));
+        }
+    });
+    var infoButton = document.querySelector('.info-button');
+    var information = document.querySelector('.information');
+    var exitInfo = document.querySelector('.exit-information');
+    infoButton.addEventListener('click', function () {
+        information.classList.remove('hide');
+    });
+    exitInfo.addEventListener('click', function () {
+        information.classList.add('hide');
+    });
+    // autonomie mobile
+    var planeur = [[-1, -1],
+        [0, -1],
+        [1, -1],
+        [-1, 0],
+        [0, 1]];
+    var planeur2 = [[-1, -1],
+        [-1, 0],
+        [-1, 1],
+        [0, 1],
+        [1, 0]];
+    var planeur3 = [[0, -1],
+        [1, -1],
+        [-1, 0],
+        [1, 0],
+        [1, 1]];
+    function generatePlaneur1() {
+        if (window.innerWidth <= 600) {
+            for (var _i = 0, planeur_1 = planeur; _i < planeur_1.length; _i++) {
+                var coord = planeur_1[_i];
+                console.log(coord);
+                var x = coord[0] + 15;
+                var y = coord[1] + 15;
+                grid[x][y] = true;
+            }
+        }
+    }
+    function generatePlaneur2() {
+        if (window.innerWidth <= 600) {
+            for (var _i = 0, planeur2_1 = planeur2; _i < planeur2_1.length; _i++) {
+                var coord = planeur2_1[_i];
+                //console.log(coord);
+                var x = coord[0] + 28;
+                var y = coord[1] + 3;
+                grid[x][y] = true;
+            }
+        }
+    }
+    function generatePlaneur3() {
+        if (window.innerWidth <= 600) {
+            for (var _i = 0, planeur3_1 = planeur3; _i < planeur3_1.length; _i++) {
+                var coord = planeur3_1[_i];
+                //console.log(coord);
+                var x = coord[0] + 3;
+                var y = coord[1] + 15;
+                grid[x][y] = true;
+            }
+        }
+    }
+    //console.log("help");
+    //console.log(rotatePlaneur());
+    setTimeout(generatePlaneur1, 1000);
+    setInterval(generatePlaneur2, 20000);
+    setInterval(generatePlaneur3, 30000);
 });

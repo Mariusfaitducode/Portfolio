@@ -53,35 +53,19 @@
     transition: all 1s ease-in-out;
 
     gap:40px;
-
-    
 }
 
 .contact-link{
-
-    
-
-    
 
     background-color: var(--dark-blue);
 
     padding: 20px;
     
-
-    
-
     border-radius: 15px;
-
-    
 
     transition: all 0.5s ease-in-out;
 
-    
-
-    /* transition: all 1s; */
-
 }
-
 
 .contact-link:hover{
     
@@ -91,4 +75,31 @@
     
 }
 
+
+@media screen and (max-width: 500px) {
+    
+    .contact-content{
+        margin-top: 200px;
+    }
+
+    .contact-container{
+        /* top: 200px; */
+        flex-direction: column;
+    }
+}
+    
+@media screen and (max-height: 850px) and (max-width: 500px){
+
+    .contact-container{
+        /* top: 200px; */
+        gap: 20px;
+    }
+}
+
+@media screen and (max-height: 800px) and (max-width: 500px){
+
+    .contact-link img{
+        width: 60px;
+    }
+}
 

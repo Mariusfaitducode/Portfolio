@@ -50,27 +50,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Modal portfolio
 
-    const links = document.querySelectorAll('.card-link') as NodeListOf<HTMLElement>;
-    const modals = document.querySelectorAll('.modal');
-    const btns = document.querySelectorAll('.modal__close');
+    // const links = document.querySelectorAll('.card-link') as NodeListOf<HTMLElement>;
+    // const modals = document.querySelectorAll('.modal');
+    // const btns = document.querySelectorAll('.modal__close');
 
-    const hideModals = () => {
-        modals.forEach(modal => {
-            modal.classList.remove('show');
-        });
-    }
+    // const hideModals = () => {
+    //     modals.forEach(modal => {
+    //         modal.classList.remove('show');
+    //     });
+    // }
 
-    links.forEach(elem => {
-        elem.addEventListener('click', (event) => {
-            event.preventDefault();
-            console.log(elem.dataset.id);
-            document.querySelector(`[id=${elem.dataset.id}]`)!.classList.add("show");
-        });
-    });
+    // links.forEach(elem => {
+    //     elem.addEventListener('click', (event) => {
+    //         event.preventDefault();
+    //         console.log(elem.dataset.id);
+    //         document.querySelector(`[id=${elem.dataset.id}]`)!.classList.add("show");
+    //     });
+    // });
 
-    btns.forEach(btn => {
-        btn.addEventListener('click', (event) => {
-            hideModals();
-        });
-    });
+    // btns.forEach(btn => {
+    //     btn.addEventListener('click', (event) => {
+    //         hideModals();
+    //     });
+    // });
 });

@@ -52,14 +52,21 @@
     
 }
 
-.hero-content span{
+.hero-content .span{
+    opacity: 0;
+    
     color: var(--white);
     font-size: 2rem;
     font-weight: 500;
     margin-left: 5px;
+    transform: translateX(-1500px);
+    transition: all 0.5s ease;
+    
 }
 
 .name{
+    opacity: 0;
+
     margin-top: 1.5rem;
     margin-bottom: 3rem;
     font-size: 8rem;
@@ -67,17 +74,42 @@
     text-transform: uppercase;
 
     color: var(--white);
-    
+
+    transform: translateX(-3000px);
+    transition: all 1s ease;
 }
 
+
+
 .title{
+    opacity: 0;
+
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 5rem;
 
     color: var(--blue);
 
+    transform: translateX(-4500px);
+
+    transition: all 1.5s ease;
+
     /* text-transform: uppercase; */
+}
+
+.span.show-hero{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.name.show-hero{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.title.show-hero{
+  opacity: 1;
+  transform: translateX(0);
 }
 
 @media screen and (max-width:1250px) {

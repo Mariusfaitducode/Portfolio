@@ -243,7 +243,7 @@
     
     margin-top: 10px;
     max-height: 80px;
-    overflow: scroll;
+    overflow-y: scroll;
 
     font-weight: 500;
 

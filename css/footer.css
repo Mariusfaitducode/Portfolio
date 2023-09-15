@@ -6,8 +6,9 @@
 }
 
 footer{
-    background: var(--light-blue);
-    color: var(--black);
+    background-color: var(--dark-blue-2);
+    border-top: solid 2px var(--dark-blue);
+    color: var(--white);
     text-align: center;
     font-size: 1.8rem;
     font-weight: 500;

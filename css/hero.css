@@ -148,6 +148,9 @@
     right: 80px;
 
     width: 300px;
+    /* max-width: 300px;
+    width: 20%;
+    min-width: 200px; */
     height: 60px;
 
     border: 3px solid var(--blue);
@@ -211,9 +214,11 @@
 
   .info-button:hover{
 
-    /* color: var(--blue-3); */
+    background-color: var(--blue);
+    color: var(--black);
+    /* opacity: 0.5; */
     
-    border: 5px solid var(--blue);
+    /* border: 5px solid var(--blue); */
 
   }
 

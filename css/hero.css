@@ -174,7 +174,7 @@
     cursor: pointer;
 }
 
-.slider-container {
+.slider-speed {
     display: flex;
     align-items: center;
     width: 280px;

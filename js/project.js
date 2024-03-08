@@ -33,25 +33,30 @@ document.addEventListener('DOMContentLoaded', function () {
             elem.classList.add('active');
         });
     });
-    // Modal portfolio
-    // const links = document.querySelectorAll('.card-link') as NodeListOf<HTMLElement>;
-    // const modals = document.querySelectorAll('.modal');
-    // const btns = document.querySelectorAll('.modal__close');
-    // const hideModals = () => {
-    //     modals.forEach(modal => {
-    //         modal.classList.remove('show');
-    //     });
-    // }
-    // links.forEach(elem => {
-    //     elem.addEventListener('click', (event) => {
-    //         event.preventDefault();
-    //         console.log(elem.dataset.id);
-    //         document.querySelector(`[id=${elem.dataset.id}]`)!.classList.add("show");
-    //     });
-    // });
-    // btns.forEach(btn => {
-    //     btn.addEventListener('click', (event) => {
-    //         hideModals();
-    //     });
-    // });
 });
+
+// SLider effect on big project row
+
+document.querySelectorAll('.slider-container').forEach(sliderContainer => {
+    
+    let currentSlide = 0;
+    const slides = sliderContainer.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    console.log(sliderContainer);
+    console.log(totalSlides);
+  
+    sliderContainer.querySelector('.next').addEventListener('click', () => {
+      moveToSlide(currentSlide + 1);
+    });
+  
+    sliderContainer.querySelector('.prev').addEventListener('click', () => {
+      moveToSlide(currentSlide - 1);
+    });
+  
+    function moveToSlide(n) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (n + totalSlides) % totalSlides;
+      slides[currentSlide].classList.add('active');
+    }
+  });

@@ -142,6 +142,9 @@
 }
 
 
+
+/* Game controller */
+
 .controller{
     position: absolute;
     bottom: 80px;
@@ -202,20 +205,16 @@
     font-size: 3rem;
     font-weight: 700;
     /* margin-right: 30px; */
-    border-left: 3px solid var(--blue);
+    /* border-left: 3px solid var(--blue);
     border-top: 3px solid var(--blue);
-    border-bottom: 3px solid var(--blue);
+    border-bottom: 3px solid var(--blue); */
 
     border-radius: 50%;
   }
 
-  .info-button:hover{
-
-    /* color: var(--blue-3); */
-    
-    border: 5px solid var(--blue);
-
-  }
+  /* .info-button:hover{
+    background: var(--transparent-blue);
+  } */
 
   .information{
     position: absolute;

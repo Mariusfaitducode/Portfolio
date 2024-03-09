@@ -2,6 +2,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Filter portfolio
     var filters = document.querySelectorAll('.portfolio-filters a');
     var projets = document.querySelectorAll('.portfolio .card');
+
+    var bigProjects = document.querySelectorAll('.big-project-row');
+
+    // console.log(bigProjects);
+
+    projets = Array.prototype.concat.apply(Array.from(bigProjects), projets);
+
+    // console.log(projets);
+
     var resetActiveLinks = function () {
         filters.forEach(function (elem) {
             elem.classList.remove('active');

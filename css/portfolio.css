@@ -70,6 +70,7 @@
 
     max-width: 1200px;
     margin: auto;
+    margin-top: 60px;
     
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr)); /* Two columns with equal width */
@@ -150,6 +151,8 @@
         padding-right: 50px;
 
         overflow: scroll;
+
+        /* margin-top: 0px; */
     }
 
     .card{
@@ -288,30 +291,41 @@
 /* Important projects */
 
 .big-project-row{
+    margin: auto;
     
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 
     width: 100%;
 
     max-width: 1200px;
     height: 400px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.big-project-row.reversed{
+    flex-direction: row-reverse;
+
+}
+
+
+
 .project-infos{
     color: var(--white);
 
-    width: 40%;
+    width: 43%;
 
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end; */
+    padding-left: 6%;
     
+}
+
+
+.reversed .project-infos{
+    padding-left: 0px;
+    padding-right: 6%;
 }
 
 .project-title{
@@ -329,13 +343,15 @@
     opacity: 1;
 }
  
-
 .slider-container{
     width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    /* background: var(--dark-blue);
+    border-radius: 20px; */
     /* position: relative; */
 }
 
@@ -347,14 +363,9 @@
 
     width: 0px;
     height: 0px;
-    
-    /* position: absolute; */
-    /* background-size: cover;
-    background-position: center; */
-    /* transition: opacity 1s ease-in-out; */
     opacity: 0;
 
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
   
 .slide.active {
@@ -368,6 +379,8 @@
     max-height: 360px;
     object-fit: cover;
     opacity: 1;
+    /* border-radius: 20px; */
+
 }
 
 .slider-button{
@@ -378,4 +391,78 @@
 
 .slider-button:hover{
     fill: var(--blue);
+}
+
+
+
+@media screen and (max-width:1250px) {
+
+    .portfolio .big-project-row{
+        
+        max-width: 90%;
+    }
+
+    .slider-button svg{
+        width: 45px;
+        height: 45px;
+    }
+}
+
+
+
+@media screen and (max-width:650px) {
+
+    .portfolio .big-project-row{
+        /* grid-template-columns: repeat(1, minmax(0, 1fr)); */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+    }
+
+    .big-project-row .project-infos{
+        width: 80%;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 20px;
+        /* padding-top: 40px; */
+        text-align: center;
+
+    }
+
+    .big-project-row .category{
+        display: flex;
+        justify-content: center;
+    }
+
+    .big-project-row .card-link-container{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .slider-container{
+        width: 90%;
+        max-height: 260px;
+
+    }
+
+    .slide img{
+        width: 90%;
+        max-height: 260px;
+        object-fit: cover;
+        opacity: 1;
+        /* border-radius: 20px; */
+    
+    }
+
+    .slider-button svg{
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.big-project-row.hide{
+    display: none;
 }

@@ -72,12 +72,7 @@
     fill: var(--blue);
 }
 
-.hide{
-    position: absolute;
-    
-    width: 0px;
-    display: none;
-}
+
 
 
 
